@@ -1,0 +1,58 @@
+.headerContainer {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.headerTop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    height: 122px;
+
+}
+.logo {
+    width: 200px;   
+    height: 100px;  
+}
+.topHeaderSecond {
+  display: flex;
+  flex-direction:  row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.topHeaderSecond svg{
+  width: 30px;
+}
+.topHeaderThird {
+  display: flex;
+  flex-direction:  row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.topHeaderThird svg {
+  width: 30px; 
+}
+.topHeaderLast {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.headerBottom {
+  display: flex;
+  flex-direction: row;
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+  height: 72px;
+  padding: 0 200px;
+}
+.headerBottom a{
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  width: 100%;
+}
