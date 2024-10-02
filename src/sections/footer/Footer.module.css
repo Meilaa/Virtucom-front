@@ -1,0 +1,31 @@
+.footerBlank{
+    height: 64px;
+    width: 100%;
+    background-color: #1D1D1D;
+}
+.footerInfo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.footerCallUs svg{
+    width: 20px;
+}
+.footerCallUs {
+    display: flex;
+    justify-content: center;
+}
+.footerAddress svg{
+    width: 18px;
+}
+.footerEmail svg{
+    width: 18px;
+}
+.footerFb svg{
+    width: 18px;
+}
+.footerRights {
+    display: flex;
+    justify-content: center;
+}

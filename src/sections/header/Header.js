@@ -53,7 +53,7 @@ function Header() {
                 <div className={styles.topHeaderLast}>
                     <span>Reikia pagalbos?</span>
                     <span>Nr: +37061271545</span>
-                    <span>Fb: gksvirtucom</span>
+                    <span>Fb: Gintautas KAzlauskas</span>
                 </div>
               </div>
               <div className={styles.headerBottom}>
