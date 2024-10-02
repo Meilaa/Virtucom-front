@@ -11,8 +11,10 @@
     height: 122px;
 }
 .logo {
-    width: 200px;   
-    height: 100px;  
+  width: 300px;  
+}
+.headerTop img{
+  height: 80%;
 }
 .topHeaderSecond {
   display: flex;

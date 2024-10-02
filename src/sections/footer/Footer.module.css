@@ -1,24 +1,47 @@
 .footerBlank{
-    height: 64px;
+    height: 24px;
     width: 100%;
     background-color: #1D1D1D;
+}
+.footerMiddle {
+    background-color: #F6F6F6;
+    height: 156px;
 }
 .footerInfo{
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
+    height: 50%;
 }
 .footerCallUs svg{
-    width: 20px;
+    width: 30px;
 }
 .footerCallUs {
     display: flex;
     justify-content: center;
+    height: 50%;
+    gap: 5px;
+    align-items: center;
+    font-size: 30px;
+    line-height: 1em;
+    font-family: 'Chivo', sans-serif;
+}
+.phoneNumber {
+    font-size: 30px;
+    line-height: 1em;
+    font-family: 'Chivo', sans-serif;
+    color: #9455D0;
 }
 .footerAddress svg{
     width: 18px;
 }
+.footerEmail, .footerAddress, .footerFb  {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .footerEmail svg{
     width: 18px;
 }
@@ -28,4 +51,5 @@
 .footerRights {
     display: flex;
     justify-content: center;
+    margin-top:20px;
 }

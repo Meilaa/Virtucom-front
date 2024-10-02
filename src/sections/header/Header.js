@@ -1,3 +1,4 @@
+
 import { Span } from 'next/dist/trace';
 import styles from './Header.module.css';  
 import Image from 'next/image';
@@ -53,7 +54,7 @@ function Header() {
                 <div className={styles.topHeaderLast}>
                     <span>Reikia pagalbos?</span>
                     <span>Nr: +37061271545</span>
-                    <span>Fb: Gintautas KAzlauskas</span>
+                    <span>Fb: Gintautas Kazlauskas</span>
                 </div>
               </div>
               <div className={styles.headerBottom}>

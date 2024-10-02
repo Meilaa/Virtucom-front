@@ -1,0 +1,62 @@
+.highlight {
+    color: #9455D0;
+  }
+.aboutSection {
+    display: flex;
+    justify-content: center;
+}
+.aboutContainer {
+    display: flex;
+    flex-direction: row;
+    width: 65%;
+    justify-content: center;
+    padding: 30px 0;
+}
+.aboutLeft {
+    width: 50%;
+}
+.aboutLeft h1 {
+    font-family: 'Chivo', sans-serif;
+    font-size: 40px;
+    line-height: 40px;
+}
+.aboutLeft p{
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    padding: 40px 0;
+    padding-right: 10px;
+}
+.aboutRight {
+    width: 50%;
+}
+  .checkList {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+  
+  .checkListItem {
+    position: relative;
+    list-style-type: none; /* Ensure no default bullet points are shown */
+    padding-left: 2.5rem; /* Space for the custom checkmark */
+    margin-bottom: 0.5rem; /* Space between list items */
+    line-height: 26px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
+  .checkListItem::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0; /* Position the checkmark at the start of the list item */
+    top: -2px; /* Adjust this as necessary for vertical alignment */
+    width: 5px; /* Width of the checkmark */
+    height: 11px; /* Height of the checkmark */
+    border-width: 0 2px 2px 0; /* Make a checkmark shape */
+    border-style: solid; /* Style for the checkmark */
+    color: #9455D0; /* Color of the checkmark */
+    transform-origin: bottom left; /* Transform origin for rotation */
+    transform: rotate(45deg); /* Rotate to form a checkmark */
+  }
+  
