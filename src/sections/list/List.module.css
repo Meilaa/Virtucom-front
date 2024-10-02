@@ -27,7 +27,7 @@
     top: 10px;
     left: 10px;
     z-index: 2;
-    color: #7c4dff; 
+    color: #B0479C; 
     font-size: 1.5rem;
   }
   
@@ -61,7 +61,7 @@
   .infoButton {
     margin-top: 15px;
     padding: 10px 15px;
-    background-color: #7c4dff;
+    background-color: #B0479C;
     border: none;
     color: white;
     cursor: pointer;
@@ -70,7 +70,7 @@
   }
   
   .infoButton:hover {
-    background-color: #5a3dbf;
+    background-color: #B0479C;
   }
   
   .card img {

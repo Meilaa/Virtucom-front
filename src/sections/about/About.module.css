@@ -1,5 +1,5 @@
 .highlight {
-    color: #9455D0;
+    color: #B0479C;
   }
 .aboutSection {
     display: flex;
@@ -55,7 +55,7 @@
     height: 11px; /* Height of the checkmark */
     border-width: 0 2px 2px 0; /* Make a checkmark shape */
     border-style: solid; /* Style for the checkmark */
-    color: #9455D0; /* Color of the checkmark */
+    color: #B0479C; /* Color of the checkmark */
     transform-origin: bottom left; /* Transform origin for rotation */
     transform: rotate(45deg); /* Rotate to form a checkmark */
   }
