@@ -5,7 +5,6 @@ function Footer() {
     return (
         <div className={styles.footerSection}>
             <div className={styles.footerContainer}>
-              <div className={styles.footerBlank}></div>
               <div className={styles.footerMiddle}>
                 <div className={styles.footerCallUs}>
                     <svg

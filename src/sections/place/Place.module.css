@@ -1,0 +1,27 @@
+.placeContainer {
+  height: 460px;
+  display: flex;
+  flex-direction: row;
+}
+.placeLeft h3 {
+  font-size: 22px;
+  line-height: 32px;
+  padding: 10px 0;
+}
+.placeLeft span {
+  font-size: 16px;
+  line-height: 32px;
+}
+.placeLeft {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100%;
+  color:white;
+  background-color: #1E1E1E;
+  padding-left: 30px ;
+  padding-top: 25px;
+}
+.placeRight img{
+  width: 100%;
+}
