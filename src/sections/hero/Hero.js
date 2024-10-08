@@ -4,13 +4,13 @@ import styles from './Hero.module.css';
 
 const backgrounds = [
   {
-    image: '/hero1.webp', // Path to first image
+    image: '/hero1.webp', 
     title: 'Original Parts Only',
     subtitle: 'Fast, Affordable Prices',
     description: 'We only carry genuine OEM replacement parts',
   },
   {
-    image: '/hero2.png', // Path to second image
+    image: '/hero2.png', 
     title: 'New Collection Available',
     subtitle: 'Exclusive Deals on New Products',
     description: 'Get the latest and greatest parts',
