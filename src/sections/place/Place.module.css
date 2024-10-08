@@ -1,5 +1,5 @@
 .placeContainer {
-  height: 300px;
+  height: 400px;
   display: flex;
   flex-direction: row;
 }
