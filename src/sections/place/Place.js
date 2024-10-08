@@ -17,7 +17,7 @@ function Place() {
                     
                 </div> 
                <div className={styles.placeRight}>
-                    <Image src="/location.png" alt="Logo" width={550} height={460} />
+                    <Image src="/location.png" alt="Logo" width={550} height={300} />
                 </div> 
             </div>
         </div>
