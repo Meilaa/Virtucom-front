@@ -1,4 +1,4 @@
-"use client";  
+"use client";
 
 import { useState } from 'react';
 import Image from 'next/image';
@@ -41,42 +41,43 @@ const RepairCard = ({ imageSrc, altText, repairType, description }) => {
 const List = () => {
   return (
     <div className={styles.repair_list}>
-      <RepairCard
-        imageSrc="/pc_repair.png"
-        altText="Kompiuterių"
-        repairType="Kompiuterių"
-        description="We specialize in repairs for all Apple products, including MacBooks, iMacs, and more."
-      />
-      <RepairCard
-        imageSrc="/tablet_repair.jpg"
-        altText="Planšetinių kompiuterių"
-        repairType="Planšetinių kompiuterių"
-        description="Comprehensive repair services for PCs and desktops. Fast and reliable."
-      />
-      <RepairCard
-        imageSrc="/phone_repair.jpg"
-        altText="Telefonų"
-        repairType="Telefonų"
-        description="Laptop repairs including screen replacement, battery issues, and more."
-      />
-      <RepairCard
-        imageSrc="/printer_repair.jpg"
-        altText="Spausdintuvų"
-        repairType="Spausdintuvų"
-        description="Tablet repairs for all major brands, including iPads and Android tablets."
-      />
-      <RepairCard
-        imageSrc="/gps.png"
-        altText="GPS navigacijų žemėlapių "
-        repairType="GPS navigacijų žemėlapių "
-        description="Tablet repairs for all major brands, including iPads and Android tablets."
-      />
-      <RepairCard
-        imageSrc="/selling.jpg"
-        altText="Prekyba"
-        repairType="Prekyba"
-        description="Tablet repairs for all major brands, including iPads and Android tablets."
-      />
+     <RepairCard
+      imageSrc="/pc_repair.png"
+      altText="Kompiuterių"
+      repairType="Kompiuterių"
+      description="Visų tipų kompiuterių remontas, įskaitant stacionarius ir nešiojamuosius kompiuterius."
+    />
+    <RepairCard
+      imageSrc="/tablet_repair.jpg"
+      altText="Planšetinių kompiuterių"
+      repairType="Planšetinių kompiuterių"
+      description="Planšetinių kompiuterių remontas, įskaitant visų populiariausių firmų, tokių kaip iPad ir Android."
+    />
+    <RepairCard
+      imageSrc="/phone_repair.jpg"
+      altText="Telefonų"
+      repairType="Telefonų"
+      description="Išmaniųjų telefonų remontas, įskaitant ekrano keitimą ir baterijos problemas."
+    />
+    <RepairCard
+      imageSrc="/printer_repair.jpg"
+      altText="Spausdintuvų"
+      repairType="Spausdintuvų"
+      description="Spausdintuvų remontas, užtikrinant jų efektyvų veikimą ir ilgaamžiškumą."
+    />
+    <RepairCard
+      imageSrc="/gps.png"
+      altText="GPS navigacijų žemėlapių"
+      repairType="GPS navigacijų žemėlapių naujinimas"
+      description="GPS navigacijų žemėlapių atnaujinimas, kad jūsų prietaisai visada turėtų naujausią informaciją."
+    />
+    <RepairCard
+      imageSrc="/selling.jpg"
+      altText="Prekyba"
+      repairType="Prekyba"
+      description="Prekyba įvairiais technologiniais ir elektroniniais prietaisais."
+    />
+
     </div>
   );
 };

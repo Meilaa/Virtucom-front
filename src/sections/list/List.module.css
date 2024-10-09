@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   gap: 35px;
   justify-content: center;
-  padding: 20px 140px;
+  padding: 30px 0;
 }
 
 .card {
@@ -11,12 +11,11 @@
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  width: 280px;
-  height: 350px;
+  width: 350px;
+  height: 420px;
   border: 1px solid #ddd;
   overflow: hidden;
   transition: background-color 0.4s ease-in-out; /* Only background color transition */
-  border-radius: 10px;
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -27,18 +26,16 @@
 
 .text {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 20px;
+  left: 20px;
   z-index: 2;
   color: #0299DC; /* Color of the main title */
   font-size: 1.5rem;
   transition: color 0.4s ease; /* Smooth text color change */
-  padding-left: 10px;
-  padding-top: 10px;
 }
 
 .repairText {
-  font-size: 1rem; /* Smaller size for 'Repair' */
+  font-size: 1.2rem; /* Smaller size for 'Repair' */
   color: #1E1E1E; /* Initial color for 'Repair' text */
 }
 
@@ -80,5 +77,5 @@
   margin: 0;
   padding: 0 20px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }

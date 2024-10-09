@@ -2,20 +2,40 @@
 import { useState, useEffect } from 'react';
 import styles from './Hero.module.css';
 
-const backgrounds = [
-  {
-    image: '/hero1.webp', 
-    title: 'Original Parts Only',
-    subtitle: 'Fast, Affordable Prices',
-    description: 'We only carry genuine OEM replacement parts',
-  },
-  {
-    image: '/hero2.png', 
-    title: 'New Collection Available',
-    subtitle: 'Exclusive Deals on New Products',
-    description: 'Get the latest and greatest parts',
-  },
-];
+  const backgrounds = [ 
+    {
+      image: '/hero1.webp', 
+      title: 'Kokybiškas kompiuterių remontas',
+      subtitle: 'Greitas aptarnavimas ir prieinamos kainos',
+      description: 'Remontuojame visų tipų kompiuterius, naudojame tik kokybiškas dalis.',
+    },
+    {
+      image: '/hero2.png', 
+      title: 'Naujausi sprendimai jūsų išmaniesiems įrenginiams',
+      subtitle: 'Patikimas išmaniųjų telefonų ir planšetinių kompiuterių remontas',
+      description: 'Remontas su garantija.',
+    },
+    {
+      image: '/hero3.webp',
+      title: 'GPS Navigacijų atnaujinimas',
+      subtitle: 'Visada naujausi žemėlapiai',
+      description: 'Atnaujiname jūsų GPS navigacijas, kad keliautumėte tiksliai ir saugiai.',
+    },
+    {
+      image: '/hero4.webp',
+      title: 'Spausdintuvų remontas ir priežiūra',
+      subtitle: 'Išskirtinė priežiūra jūsų biuro technikai',
+      description: 'Teikiame spausdintuvų remonto paslaugas ir tiekiame eksploatacines medžiagas.',
+    },
+    {
+      image: '/hero5.jpg',
+      title: 'Garso ir vaizdo sistemų diegimas',
+      subtitle: 'Renginių įgarsinimas ir sistemų projektavimas',
+      description: 'Projektuojame ir diegiame garso, vaizdo ir apšvietimo sistemas jūsų renginiams.',
+    }
+  ];
+  
+
 
 const PartsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,7 +43,7 @@ const PartsSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
-    }, 9000); // Change every 7 seconds
+    }, 7000); // Change every 7 seconds
 
     return () => clearInterval(interval); // Clear interval on component unmount
   }, []);
