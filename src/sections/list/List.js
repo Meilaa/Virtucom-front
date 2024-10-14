@@ -17,8 +17,8 @@ const RepairCard = ({ imageSrc, altText, repairType, description }) => {
         src={imageSrc} 
         alt={altText} 
         layout="responsive" 
-        width={250} // Use appropriate dimensions
-        height={300} // Use appropriate dimensions
+        width={200} // Use appropriate dimensions
+        height={200} // Use appropriate dimensions
       />
       <div className={hovered ? styles.hiddenText : styles.text}>
         <h3>{repairType}</h3>
@@ -42,13 +42,13 @@ const List = () => {
   return (
     <div className={styles.repair_list}>
      <RepairCard
-      imageSrc="/pc_repair.png"
+      imageSrc="/computer.webp"
       altText="Kompiuterių"
       repairType="Kompiuterių"
       description="Visų tipų kompiuterių remontas, įskaitant stacionarius ir nešiojamuosius kompiuterius."
     />
     <RepairCard
-      imageSrc="/tablet_repair.jpg"
+      imageSrc="/ipad.png"
       altText="Planšetinių kompiuterių"
       repairType="Planšetinių kompiuterių"
       description="Planšetinių kompiuterių remontas, įskaitant visų populiariausių firmų, tokių kaip iPad ir Android."

@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function About() {
     return (
-        <div className={styles.aboutSection}>
+        <section className={styles.aboutSection} id='about'>
             <div className={styles.aboutContainer}>
                 <div className={styles.aboutLeft}>
                     <h1>Apie <span className={styles.highlight}>Mus</span></h1>
@@ -21,7 +21,7 @@ function About() {
                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

@@ -1,27 +1,47 @@
 .servicesSection  {
     width: 100%;
 }
+
 .servicesContainer {
     display: flex;
     flex-direction: row;
     background-color: #1E1E1E;
     width: 100%;
-    height: 400px;
+    height: 450px;
+    position: relative; 
 }
+
 .servicesContainer img {
     width: 66%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .8;
 }
+
+.servicesTransmission {
+    width: 66%;
+    height: 100%; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    background: linear-gradient(to left,  #1E1E1E 20%, rgba(13,85,144,.2) 80%);
+    z-index: 1; 
+    opacity: 1; 
+}
+
 .servicesRight {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color:white;
+    color: white;
     width: 34%;
     font-size: 18px;
     line-height: 32px;
+    z-index: 2; /* Make sure the text is above both the gradient and image */
 }
-.servicesRight span{
+
+.servicesRight span {
     display: flex;
     justify-content: center;
     align-items: center;

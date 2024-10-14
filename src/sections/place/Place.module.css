@@ -1,29 +1,50 @@
 .placeContainer {
-  height: 400px;
-  display: flex;
-  flex-direction: row;
+  height: 450px; /* Set the height of the container */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Arrange children in a row */
 }
-.placeLeft h3 {
-  font-size: 22px;
-  line-height: 32px;
-}
-.placeLeft span {
-  font-size: 16px;
-  line-height: 32px;
-}
+
+/* Style for the left section */
 .placeLeft {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 34%;
-  height: 100%;
-  color:white;
-  background-color: #1E1E1E;
+  display: flex; /* Use flexbox for the left section */
+  flex-direction: column; /* Arrange child elements vertically */
+  justify-content: center; /* Center child elements vertically */
+  padding-left: 90px; /* Add padding to the left */
+  width: 34%; /* Set width of the left section */
+  height: 100%; /* Make it full height */
+  color: white; /* Set text color to white */
+  background-color: #1E1E1E; /* Dark background color */
 }
+
+.placeLeft h3 {
+  font-size: 25px; /* Heading font size */
+  line-height: 55px; /* Line height for heading */
+  margin: 0; /* Remove default margin */
+}
+
+.placeLeft span {
+  font-size: 16px; /* Font size for hours */
+  line-height: 32px; /* Line height for hours */
+}
+
+/* Style for the right section */
 .placeRight {
-  width: 66%;
+  width: 66%; /* Set width of the right section */
+  height: 100%; /* Make it full height */
+  display: flex; /* Use flexbox for right section */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
 }
-.placeRight img{
-  width: 100%;
+
+.placeRight iframe {
+  width: 100%; /* Make iframe take full width */
+  height: 100%; /* Make iframe take full height */
+  border: 0; /* Remove default border */
+}
+.mapIframe {
+  width: 100%; /* Make iframe take full width */
+  height: 100%; 
+  border: 0; /* Remove default border */
+  filter: invert(100%) grayscale(100%);
+  transition: filter 0.5s ease;
 }

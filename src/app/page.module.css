@@ -4,11 +4,13 @@
   align-items: center;
   justify-items: center;
   min-height: 100vh;
-  gap: 64px;
   font-family: sans-serif; /* Updated for simplicity */
 }
 
 .main {
   width: 100%;
+}
+.html {
+  scroll-behavior: smooth;
 }
 

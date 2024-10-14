@@ -1,6 +1,9 @@
 .repair_list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
   gap: 35px;
   justify-content: center;
   padding: 30px 0;
@@ -15,13 +18,13 @@
   height: 420px;
   border: 1px solid #ddd;
   overflow: hidden;
-  transition: background-color 0.4s ease-in-out; /* Only background color transition */
+  transition: background-color 0.4s ease-in-out; 
   background-color: #f9f9f9;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card.hovered {
-  background-color: white; /* Change background color to white on hover */
+  background-color: white; 
 }
 
 .text {
@@ -29,14 +32,14 @@
   top: 20px;
   left: 20px;
   z-index: 2;
-  color: #0299DC; /* Color of the main title */
+  color: #0299DC; 
   font-size: 1.5rem;
-  transition: color 0.4s ease; /* Smooth text color change */
+  transition: color 0.4s ease;
 }
 
 .repairText {
-  font-size: 1.2rem; /* Smaller size for 'Repair' */
-  color: #1E1E1E; /* Initial color for 'Repair' text */
+  font-size: 1.2rem; 
+  color: #1E1E1E; 
 }
 
 .overlay {
@@ -45,32 +48,32 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: white; /* Fully white background when hovered */
-  color: black; /* Text color matches the 'Repair' text color */
+  background-color: white; 
+  color: black; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.4s ease, color 0.4s ease; /* Smooth transition for opacity */
+  transition: opacity 0.4s ease, color 0.4s ease; 
 }
 
 .card.hovered .overlay {
-  opacity: 1; /* Show overlay when hovered */
+  opacity: 1; 
 }
 
 .card img {
   width: 100%;
   height: auto;
   object-fit: cover;
-  transition: opacity 1.5s ease, transform 1.5s ease; /* Slow fade-out and zoom in */
-  opacity: 1; /* Image is visible by default */
-  transform: scale(1); /* No zoom by default */
+  transition: opacity 1.5s ease, transform 1.5s ease; 
+  opacity: 1;
+  transform: scale(1); 
 }
 
 .card.hovered img {
-  opacity: 0; /* Hide image on hover */
-  transform: scale(1.2); /* Zoom in by 20% on hover */
+  opacity: 0;
+  transform: scale(1.2); 
 }
 
 .overlay p {

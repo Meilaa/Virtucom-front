@@ -4,17 +4,20 @@
   justify-content: center;
 }
 .headerTop {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
-    height: 122px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  height: 122px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
 }
 .logo {
-  width: 300px;  
+  width: 150px;  
 }
 .headerTop img{
-  height: 80%;
+  height: auto;
 }
 .topHeaderSecond {
   display: flex;
@@ -39,7 +42,7 @@
 .topHeaderLast {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 .headerBottom {
   display: flex;

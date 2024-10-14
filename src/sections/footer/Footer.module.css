@@ -31,7 +31,9 @@
     font-size: 30px;
     line-height: 1em;
     font-family: 'Chivo', sans-serif;
-    color: #0299DC;
+    background: linear-gradient(to top, #B3469C 40%, #0299DC 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .footerAddress svg{
     width: 18px;

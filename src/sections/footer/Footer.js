@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 function Footer() {
     return (
-        <div className={styles.footerSection}>
+        <section className={styles.footerSection} id='footer'>
             <div className={styles.footerContainer}>
               <div className={styles.footerMiddle}>
                 <div className={styles.footerCallUs}>
@@ -27,7 +27,8 @@ function Footer() {
                         </g>
                     </svg>
                     <span>Turi klausimų? Paskambink </span>
-                    <span className={styles.phoneNumber}>+37061271545</span>
+                    <a className={styles.phoneNumber} href="tel:+37061271545">+37061271545</a>
+                   
                 </div>
                 <div className={styles.footerInfo}>
                     <div className={styles.footerAddress}>
@@ -48,7 +49,9 @@ function Footer() {
                                     c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z"></path>
                             </g>
                         </svg>
-                        <span>S. Daukanto 31, Vilkaviškis</span>
+                        
+                        <a href="https://www.google.com/maps?q=S.+Daukanto+31,+Vilkaviškis" target="_blank" rel="noopener noreferrer">S. Daukanto 31, Vilkaviškis</a>
+
                     </div>
                     <div className={styles.footerEmail}>
                         <svg
@@ -73,7 +76,7 @@ function Footer() {
                                 </g>
                                 </g>
                         </svg>
-                        <span>uabgksvirtucom@gmail.com</span>
+                        <a href="mailto:uabgksvirtucom@gmail.com">uabgksvirtucom@gmail.com</a> 
                     </div>
                     <div className={styles.footerFb}>
                         <svg
@@ -95,7 +98,8 @@ function Footer() {
                             </g>
                             </g>
                         </svg>
-                        <span>Gintautas Kazlauskas</span>
+                        <a href="https://www.facebook.com">Gintautas Kazlauskas</a>
+
                     </div>
                 </div>
               </div>
@@ -103,7 +107,7 @@ function Footer() {
                 <span>© 2024 GKSvirtucom</span>
               </div>
             </div>
-        </div>
+        </section>
     );
 }
 

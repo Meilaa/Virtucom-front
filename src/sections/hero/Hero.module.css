@@ -15,20 +15,20 @@
     color: white; /* Adjust based on the background color */
     background-color: rgba(0, 0, 0, 0.5); /* Transparent background for better readability */
     padding: 20px;
-    border-radius: 10px;
+    width: 100%;
   }
   
 .textContainer h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
   }
   
 .textContainer h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
   }
   
   .subtext {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   

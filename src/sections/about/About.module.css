@@ -1,5 +1,7 @@
 .highlight {
-    color: #0299DC;
+  background: linear-gradient(to top, #B3469C 40%, #0299DC 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   }
 .aboutSection {
     display: flex;
@@ -8,12 +10,15 @@
 .aboutContainer {
     display: flex;
     flex-direction: row;
-    width: 65%;
     justify-content: center;
+    gap:50px;
     padding: 30px 0;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
 }
 .aboutLeft {
-    width: 50%;
+    width: 45%;
 }
 .aboutLeft h1 {
     font-family: 'Chivo', sans-serif;
@@ -21,14 +26,13 @@
     line-height: 40px;
 }
 .aboutLeft p{
-    font-size: 15px;
+    font-size: 18px;
     line-height: 24px;
     margin-bottom: 24px;
     padding: 40px 0;
-    padding-right: 10px;
 }
 .aboutRight {
-    width: 50%;
+    width: 45%;
 }
   .checkList {
     margin: 0;
@@ -42,7 +46,7 @@
     margin-bottom: 0.5rem; /* Space between list items */
     line-height: 26px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .checkListItem::before {
