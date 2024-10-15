@@ -61,7 +61,7 @@ function Header() {
                                 ></path>
                             </g>
                         </svg>
-                        <span>I-V 9-18, VI 9-14</span>
+                        <span>I-V 9-18, VI 9-13</span>
                     </div>
                     <div className={styles.topHeaderLast}>
                         <a href="tel:+37061271545">

@@ -71,11 +71,9 @@
 
   .headerTop {
     height: 85px;
+    gap: 20px;
   }
   .topHeaderLast a {
     display: none;
-  }
-  .logo {
-    padding-left: 30px;
   }
 }
