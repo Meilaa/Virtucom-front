@@ -67,7 +67,7 @@
     .aboutContainer{
       flex-direction: column;
       gap: 0;
-      padding: 10px 0;
+      padding: 15px 0;
     }
     .aboutLeft {
       width: 100%;

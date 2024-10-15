@@ -1,5 +1,4 @@
 .footerMiddle {
-    background-color: #F6F6F6;
     height: 156px;
 }
 .footerInfo{
@@ -66,4 +65,13 @@
    .footerRights {
     margin: 20px 0;
    }
+   .phoneNumber {
+    font-size: 25px;
+    line-height: .8em;
+   }
+   .footerCallUs {
+    font-size: 25px;
+    line-height: 0.8em;
+    
+}
 }

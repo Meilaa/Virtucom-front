@@ -79,4 +79,10 @@
   .topHeaderLast {
     flex-direction: row;
   }
+  .topHeaderLast {
+    display: none;
+  }
+  .logo {
+    padding-left: 30px;
+  }
 }

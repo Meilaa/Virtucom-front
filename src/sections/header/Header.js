@@ -20,7 +20,7 @@ function Header() {
         <div className={styles.headerSection}>
             <div className={styles.headerContainer}>
                 <div className={styles.headerTop}>
-                    <Image className={styles.logo} src="/logo.jpg" alt="Logo" width={500} height={50} />
+                    <Image className={styles.logo} src="/logo.png" alt="Logo" width={500} height={50} />
                     <div className={styles.topHeaderSecond}> 
                         <svg 
                             fill="#0299DC" 
