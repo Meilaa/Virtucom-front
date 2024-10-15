@@ -51,6 +51,7 @@
 @media only screen and (max-width: 767px) {
   .placeContainer {
     flex-direction: column-reverse;
+    height: auto;
   }
   .placeLeft {
     width: 100%;
@@ -59,17 +60,17 @@
     padding: 15px 0;
   }
   .placeLeft h3 {
-    font-size: 20px; /* Heading font size */
-    line-height: 50px; /* Line height for heading */
-    margin: 0; /* Remove default margin */
+    font-size: 20px; 
+    line-height: 50px; 
+    margin: 0; 
   }
   
   .placeLeft span {
-    font-size: 14px; /* Font size for hours */
-    line-height: 27px; /* Line height for hours */
+    font-size: 14px; 
+    line-height: 27px; 
   }
   .placeRight{
     width: 100%;
-    height: 181px;
+    height: 300px;
   }
 }

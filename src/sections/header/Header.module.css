@@ -12,6 +12,7 @@
   max-width: 1440px;
   margin: 0 auto;
   width: 100%;
+  font-size: 18px;
 }
 .logo {
   width: 150px;  
@@ -64,8 +65,11 @@
     padding: 0 15px;
     height: 45px;
   }
+  .headerBottom a{
+    font-size: 13px;
+  }
 
-  .headerBottom a {
+  .headerTop a, .headerTop span {
     font-size: 13px;
   }
 
