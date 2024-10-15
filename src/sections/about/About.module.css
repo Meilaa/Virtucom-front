@@ -63,4 +63,30 @@
     transform-origin: bottom left; /* Transform origin for rotation */
     transform: rotate(45deg); /* Rotate to form a checkmark */
   }
-  
+  @media only screen and (max-width: 767px) {
+    .aboutContainer{
+      flex-direction: column;
+      gap: 0;
+      padding: 10px 0;
+    }
+    .aboutLeft {
+      width: 100%;
+      margin: 0 10px;
+    }
+    .aboutRight {
+      width: 100%;
+    }
+    .aboutLeft h1 {
+      font-size: 35px;
+      line-height: 35px;
+  }
+  .aboutLeft p{
+      font-size: 16px;
+      line-height: 20px;
+      padding: 20px 0;
+    }
+  .checkListItem {
+    line-height: 24px;
+    font-size: 16px;
+  }
+}

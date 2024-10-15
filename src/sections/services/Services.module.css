@@ -1,4 +1,4 @@
-.servicesSection  {
+.servicesSection  { 
     width: 100%;
 }
 
@@ -8,7 +8,7 @@
     background-color: #1E1E1E;
     width: 100%;
     height: 450px;
-    position: relative; 
+    position: relative;
 }
 
 .servicesContainer img {
@@ -24,7 +24,7 @@
     position: absolute; 
     top: 0;
     left: 0;
-    background: linear-gradient(to left,  #1E1E1E 20%, rgba(13,85,144,.2) 80%);
+    background: linear-gradient(to left, #1E1E1E 20%, rgba(13,85,144, .2) 80%);
     z-index: 1; 
     opacity: 1; 
 }
@@ -38,11 +38,52 @@
     width: 34%;
     font-size: 18px;
     line-height: 32px;
-    z-index: 2; /* Make sure the text is above both the gradient and image */
+    z-index: 2; /* Ensure text is above both gradient and image */
 }
 
 .servicesRight span {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Media Query for stacking the elements */
+@media only screen and (max-width: 767px) {
+    .servicesContainer {
+        position: relative;
+        display: block; /* Remove flex to allow stacking */
+        height: 350px; /* Keep height the same */
+    }
+
+    .servicesContainer img,
+    .servicesTransmission,
+    .servicesRight {
+        position: absolute; /* Stack everything on top of each other */
+        top: 0;
+        left: 0;
+        width: 100%; /* Ensure all elements take full width */
+        height: 100%; /* Ensure all elements take full height */
+    }
+
+    .servicesContainer img {
+        z-index: 1; /* Image at the bottom */
+        opacity: 0.5; /* Lower opacity for better readability of text */
+    }
+
+    .servicesTransmission {
+        z-index: 2; /* Gradient above the image */
+        background: linear-gradient(to bottom, #1E1E1E 20%, rgba(13,85,144, .2) 80%);
+        opacity: 0.8; /* Slightly opaque to blend with the image */
+    }
+
+    .servicesRight {
+        z-index: 3; /* Text on top */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        padding: 20px; /* Add padding to text for better readability */
+    }
 }

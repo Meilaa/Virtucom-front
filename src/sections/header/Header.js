@@ -85,14 +85,14 @@ function Header() {
                             ></path>
                             </g>
                         </svg>
-                            Nr. +37061271545</a>
+                             +37061271545</a>
                         <a href="https://www.facebook.com">
                         <svg
                             fill="#0299DC"
                             version="1.1"
                             xmlns="http://www.w3.org/2000/svg"
                             xmlnsXlink="http://www.w3.org/1999/xlink"
-                            viewBox="0 0 512 512"
+                            viewBox="-50 -150 512 600"
                             xmlSpace="preserve"
                             width="20px" 
                         >

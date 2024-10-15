@@ -48,3 +48,28 @@
   filter: invert(100%) grayscale(100%);
   transition: filter 0.5s ease;
 }
+@media only screen and (max-width: 767px) {
+  .placeContainer {
+    flex-direction: column-reverse;
+  }
+  .placeLeft {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    padding: 15px 0;
+  }
+  .placeLeft h3 {
+    font-size: 20px; /* Heading font size */
+    line-height: 50px; /* Line height for heading */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .placeLeft span {
+    font-size: 14px; /* Font size for hours */
+    line-height: 27px; /* Line height for hours */
+  }
+  .placeRight{
+    width: 100%;
+    height: 350px;
+  }
+}
