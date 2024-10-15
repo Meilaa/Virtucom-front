@@ -64,22 +64,15 @@
     padding: 0 15px;
     height: 45px;
   }
+
   .headerBottom a {
     font-size: 13px;
   }
+
   .headerTop {
     height: 85px;
   }
-  .topHeaderSecond{
-    display: none;
-  }
-  .topHeaderThird{
-    display: none;
-  }
-  .topHeaderLast {
-    flex-direction: row;
-  }
-  .topHeaderLast {
+  .topHeaderLast a {
     display: none;
   }
   .logo {
