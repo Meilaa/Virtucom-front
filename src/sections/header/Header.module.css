@@ -76,8 +76,13 @@
   .headerTop {
     height: 85px;
     gap: 20px;
+    justify-content: inherit;
   }
+  
   .topHeaderLast a {
+    display: none;
+  }
+  .topHeaderSecond {
     display: none;
   }
 }

@@ -63,7 +63,8 @@
     padding: 25px 0;
    }
    .footerRights {
-    margin: 20px 0;
+    margin: 15px 0;
+    margin-bottom: 40px;
    }
    .phoneNumber {
     font-size: 25px;
@@ -72,6 +73,10 @@
    .footerCallUs {
     font-size: 25px;
     line-height: 0.8em;
-    
-}
+    flex-direction: column;
+    gap: 20px;
+    }
+    .footerCallUs svg{
+     display: none;
+    }
 }
