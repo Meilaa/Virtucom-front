@@ -1,7 +1,7 @@
 .footerMiddle {
     height: 156px;
 }
-.footerInfo{
+.footerInfo, .footerInfoBottom{
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -48,7 +48,8 @@
 .footerRights {
     display: flex;
     justify-content: center;
-    margin-top:20px;
+    margin-top:40px;
+    margin-bottom: 30px;
 }
 @media only screen and (max-width: 767px) {
    .footerInfo {
@@ -78,5 +79,8 @@
     }
     .footerCallUs svg{
      display: none;
+    }
+    .footerInfoBottom {
+        padding: 20px 0;
     }
 }

@@ -98,10 +98,13 @@ function Footer() {
                             </g>
                             </g>
                         </svg>
-                        <a href="https://www.facebook.com">Gintautas Kazlauskas</a>
+                        <a href="https://www.facebook.com">Gintautas Kazakevičius</a>
 
                     </div>
                 </div>
+              </div>
+              <div className={styles.footerInfoBottom}>
+                <span>Įm. kodas 185285648 / PVM kodas LT852856412</span>
               </div>
               <div className={styles.footerRights}>
                 <span>© 2024 GKSvirtucom</span>

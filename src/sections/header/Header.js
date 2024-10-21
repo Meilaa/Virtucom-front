@@ -106,7 +106,7 @@ function Header() {
                                 ></path>
                             </g>
                             </g>
-                        </svg> Gintautas Kazlauskas</a>
+                        </svg> Gintautas Kazakevičius</a>
                     </div>
                 </div>
                 <div className={styles.headerBottom}>

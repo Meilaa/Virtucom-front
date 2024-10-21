@@ -49,7 +49,7 @@ const List = () => {
       imageSrc="/tablet.svg"
       altText="Planšetinių kompiuterių"
       repairType="Planšetinių kompiuterių"
-      description="Planšetinių kompiuterių remontas, įskaitant visų populiariausių firmų, tokių kaip iPad ir Android."
+      description="Planšetinių kompiuterių remontas, apimantis įvairių gedimų diagnostiką ir taisymą."
     />
     <RepairCard
       imageSrc="/phone.svg"
@@ -61,7 +61,7 @@ const List = () => {
       imageSrc="/printer.svg"
       altText="Spausdintuvų"
       repairType="Spausdintuvų"
-      description="Spausdintuvų remontas, užtikrinant jų efektyvų veikimą ir ilgaamžiškumą."
+      description="Spausdintuvų remontas, užtikrinant jų efektyvų veikimą ir ilgaamžiškumą. Taip pat prekyba spaudintuvo kasetėmis."
     />
     <RepairCard
       imageSrc="/gps.svg"
