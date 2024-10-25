@@ -7,7 +7,7 @@ function About() {
             <div className={styles.aboutContainer}>
                 <div className={styles.aboutLeft}>
                     <h1>Apie <span className={styles.highlight}>Mus</span></h1>
-                    <p>„Virtucom“ įsipareigoja teikti aukščiausios kokybės klientų aptarnavimą ir profesionalias remonto paslaugas visiems Jūsų technologijų ir muzikos įrangos poreikiams. Nesvarbu, ar tai kompiuteris, išmanusis įrenginys, ar muzikos instrumentas – mes pasirūpinsime greitu ir patikimu remontu, kad Jūsų įranga vėl veiktų nepriekaištingai. Teikiame paslaugas tiek namų vartotojams, tiek verslui, todėl esame patikimas partneris bet kokio tipo technikai.</p>
+                    <p>„UAB GKSvirtucom“ įsteigta 1995 metais. Įmonė įsipareigoja teikti aukščiausios kokybės klientų aptarnavimą ir profesionalias remonto paslaugas visiems Jūsų technologijų ir muzikos įrangos poreikiams. Nesvarbu, ar tai kompiuteris, išmanusis įrenginys, ar muzikos instrumentas – mes pasirūpinsime greitu ir patikimu remontu, kad Jūsų įranga vėl veiktų nepriekaištingai. Teikiame paslaugas tiek namų vartotojams, tiek verslui, todėl esame patikimas partneris bet kokio tipo technikai.</p>
                 </div>
                 <div className={styles.aboutRight}>
                 <ul className={styles.checkList}>
