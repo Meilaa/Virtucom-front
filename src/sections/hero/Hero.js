@@ -31,7 +31,7 @@ import styles from './Hero.module.css';
       image: '/hero5.jpg',
       title: 'Garso ir vaizdo sistemų diegimas',
       subtitle: 'Renginių įgarsinimas ir sistemų projektavimas',
-      description: 'Projektuojame ir diegiame garso, vaizdo ir apšvietimo sistemas jūsų renginiams.',
+      description: 'Projektuojame ir diegiame garso, vaizdo ir apšvietimo sistemas Jūsų renginiams.',
     }
   ];
   

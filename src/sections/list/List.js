@@ -67,7 +67,7 @@ const List = () => {
       imageSrc="/gps.svg"
       altText="GPS navigacijų žemėlapių naujinimas "
       repairType="GPS navigacijų žemėlapių naujinimas"
-      description="GPS navigacijų žemėlapių atnaujinimas, kad jūsų prietaisai visada turėtų naujausią informaciją."
+      description="GPS navigacijų žemėlapių atnaujinimas, kad Jūsų prietaisai visada turėtų naujausią informaciją."
     />
     <RepairCard
       imageSrc="/shop.svg"

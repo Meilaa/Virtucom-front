@@ -11,13 +11,13 @@ function About() {
                 </div>
                 <div className={styles.aboutRight}>
                 <ul className={styles.checkList}>
-                        <li className={styles.checkListItem}>Visų tipų kompiuterių ir nešiojamųjų kompiuterių remontas</li>
+                        <li className={styles.checkListItem}>Visų tipų kompiuterių kompiuterių remontas</li>
                         <li className={styles.checkListItem}>Išmaniųjų įrenginių ir planšetinių kompiuterių remontas</li>
                         <li className={styles.checkListItem}>Spausdintuvų remontas ir priežiūra</li>
-                        <li className={styles.checkListItem}>Muzikos instrumentų remontas ir priedų pardavimas</li>
-                        <li className={styles.checkListItem}>GPS žemėlapių atnaujinimai</li>
+                        <li className={styles.checkListItem}>Muzikos instrumentų remontas ir jų priedų pardavimas</li>
+                        <li className={styles.checkListItem}>GPS žemėlapių atnaujinimas</li>
                         <li className={styles.checkListItem}>Įrenginių baterijų atnaujinimas</li>
-                        <li className={styles.checkListItem}>Prekyba aukšto techninio lygio garso, vaizdo ir šviesos produktais</li>
+                        <li className={styles.checkListItem}>Aukšto techninio lygio garso, vaizdo ir šviesos produktų prekyba</li>
                     </ul>
                 </div>
             </div>

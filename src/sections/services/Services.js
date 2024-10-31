@@ -9,8 +9,7 @@ function Services() {
                 <div className={styles.servicesTransmission}></div>
                 <div className={styles.servicesRight}>
                     <span>Renginių įgarsinimo paslaugos</span>
-                    <span>Garso, vaizdo sisteminių sprendimų, meninio apšvietimo </span>
-                    <span>sistemų projektavimas ir diegimas, aptarnavimas</span>
+                    <span>Garso, vaizdo sisteminių sprendimų, meninio apšvietimo sistemų projektavimas ir diegimas, aptarnavimas</span>
                 </div>
             </div>
         </section>

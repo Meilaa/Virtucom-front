@@ -27,7 +27,7 @@ function Footer() {
                         </g>
                     </svg>
                     <span>Turi klausimų? Paskambink </span>
-                    <a className={styles.phoneNumber} href="tel:+37061271545">+37061271545</a>
+                    <a className={styles.phoneNumber} href="tel:+37061271545">+370 612 715 45</a>
                    
                 </div>
                 <div className={styles.footerInfo}>
