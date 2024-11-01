@@ -39,7 +39,7 @@ function Header() {
                                     c-27.114,0-49.191-22.076-49.191-49.191C148.658,110.2,170.734,88.138,197.849,88.138z"></path>
                             </g>
                         </svg>
-                        <a href="https://www.google.com/maps?q=S.+Daukanto+31,+Vilkaviškis" target="_blank" rel="noopener noreferrer">S. Daukanto 31, Vilkaviškis</a>
+                        <a href="https://www.google.com/maps?q=S.+Daukanto+31,+Vilkaviškis" target="_blank" rel="noopener noreferrer">S. Daukanto g. 31, Vilkaviškis</a>
                     </div>
                     <div className={styles.topHeaderThird}>
                         <svg 
@@ -106,7 +106,7 @@ function Header() {
                                 ></path>
                             </g>
                             </g>
-                        </svg> Gintautas Kazakevičius</a>
+                        </svg>UAB GKSvirtucom</a>
                     </div>
                 </div>
                 <div className={styles.headerBottom}>

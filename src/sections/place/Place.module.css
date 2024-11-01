@@ -16,6 +16,7 @@
   background-color: #1E1E1E; /* Dark background color */
 }
 
+
 .placeLeft h3 {
   font-size: 25px; /* Heading font size */
   line-height: 55px; /* Line height for heading */
@@ -26,7 +27,15 @@
   font-size: 16px; /* Font size for hours */
   line-height: 32px; /* Line height for hours */
 }
-
+.placeWorkingTime {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+.placeDays, .placeTime {
+  display: flex;
+  flex-direction: column;
+}
 /* Style for the right section */
 .placeRight {
   width: 66%; /* Set width of the right section */
@@ -48,6 +57,12 @@
   filter: invert(100%) grayscale(100%);
   transition: filter 0.5s ease;
 }
+@media only screen and (max-width: 1089px) {
+  .placeLeft{
+    padding: 15px 35px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .placeContainer {
     flex-direction: column-reverse;

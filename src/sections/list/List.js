@@ -21,7 +21,7 @@ const RepairCard = ({ imageSrc, altText, repairType, description }) => {
       />
       <div className={hovered ? styles.hiddenText : styles.text}>
         <h3>{repairType}</h3>
-        {repairType === "GPS navigacijų žemėlapių naujinimas" ? (
+        {repairType === "GPS navigacijų žemėlapių " ? (
           <p className={styles.repairText}>Naujinimas</p> 
         ) : (
           repairType !== "Prekyba" && (
@@ -43,13 +43,13 @@ const List = () => {
       imageSrc="/computer.svg"
       altText="Kompiuterių"
       repairType="Kompiuterių"
-      description="Visų tipų kompiuterių remontas, įskaitant stacionarius ir nešiojamuosius kompiuterius."
+      description="Visų tipų kompiuterių remontas, įskaitant stacionarius ir nešiojamus kompiuterius."
     />
     <RepairCard
       imageSrc="/tablet.svg"
       altText="Planšetinių kompiuterių"
       repairType="Planšetinių kompiuterių"
-      description="Planšetinių kompiuterių remontas, apimantis įvairių gedimų diagnostiką ir taisymą."
+      description="Planšetinių kompiuterių remontas, apimantis įvairių gedimų diagnostiką ir jų šalinimą."
     />
     <RepairCard
       imageSrc="/phone.svg"
@@ -61,13 +61,13 @@ const List = () => {
       imageSrc="/printer.svg"
       altText="Spausdintuvų"
       repairType="Spausdintuvų"
-      description="Spausdintuvų remontas, užtikrinant jų efektyvų veikimą ir ilgaamžiškumą. Taip pat prekyba spaudintuvo kasetėmis."
+      description="Spausdintuvų remontas, užtikrinantis jų efektyvų veikimą ir ilgaamžiškumą. Taip pat prekyba spausdintuvo kasetėmis."
     />
     <RepairCard
       imageSrc="/gps.svg"
-      altText="GPS navigacijų žemėlapių naujinimas "
-      repairType="GPS navigacijų žemėlapių naujinimas"
-      description="GPS navigacijų žemėlapių atnaujinimas, kad Jūsų prietaisai visada turėtų naujausią informaciją."
+      altText="GPS navigacijų žemėlapių"
+      repairType="GPS navigacijų žemėlapių "
+      description="GPS navigacijų žemėlapių atnaujinimas, užtikrinantis naujausią informaciją Jūsų prietaisuose."
     />
     <RepairCard
       imageSrc="/shop.svg"

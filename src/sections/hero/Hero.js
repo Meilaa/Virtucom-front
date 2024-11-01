@@ -11,7 +11,7 @@ import styles from './Hero.module.css';
     },
     {
       image: '/hero2.png', 
-      title: 'Naujausi sprendimai jūsų išmaniesiems įrenginiams',
+      title: 'Naujausi sprendimai Jūsų išmaniesiems įrenginiams',
       subtitle: 'Patikimas išmaniųjų telefonų ir planšetinių kompiuterių remontas',
       description: 'Remontas su garantija.',
     },
@@ -19,19 +19,19 @@ import styles from './Hero.module.css';
       image: '/hero3.webp',
       title: 'GPS Navigacijų atnaujinimas',
       subtitle: 'Visada naujausi žemėlapiai',
-      description: 'Atnaujiname jūsų GPS navigacijas, kad keliautumėte tiksliai ir saugiai.',
+      description: 'Atnaujiname Jūsų GPS navigacijas, kad keliautumėte tiksliai, greitai ir saugiai.',
     },
     {
       image: '/hero4.webp',
       title: 'Spausdintuvų remontas ir priežiūra',
-      subtitle: 'Išskirtinė priežiūra jūsų biuro technikai',
-      description: 'Teikiame spausdintuvų remonto paslaugas ir tiekiame eksploatacines medžiagas.',
+      subtitle: 'Išskirtinė priežiūra Jūsų biuro technikai',
+      description: 'Teikiame spausdintuvų remonto paslaugas ir eksploatacines medžiagas.',
     },
     {
       image: '/hero5.jpg',
       title: 'Garso ir vaizdo sistemų diegimas',
       subtitle: 'Renginių įgarsinimas ir sistemų projektavimas',
-      description: 'Projektuojame ir diegiame garso, vaizdo ir apšvietimo sistemas Jūsų renginiams.',
+      description: 'Projektuojame ir diegiame garso, vaizdo ir apšvietimo sistemas Jūsų šventėms bei įvairiems renginiams.',
     }
   ];
   
@@ -43,7 +43,7 @@ const PartsSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
-    }, 7000); // Change every 7 seconds
+    }, 10000); // Change every 7 seconds
 
     return () => clearInterval(interval); // Clear interval on component unmount
   }, []);

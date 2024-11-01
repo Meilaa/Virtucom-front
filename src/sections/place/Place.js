@@ -18,13 +18,26 @@ function Place() {
             <div className={styles.placeContainer}>
                 <div className={styles.placeLeft}>
                     <h3>Darbo laikas</h3>
-                    <span>Pirmadienis 9.00-18.00</span>
-                    <span>Antradienis 9.00-18.00</span>
-                    <span>Trečiadienis 9.00-18.00</span>
-                    <span>Ketvirtadienis 9.00-18.00</span>
-                    <span>Penktadienis 9.00-18.00</span>
-                    <span>Šeštadienis 9.00-13.00</span>
-                    <span>Sekmadienis NEDIRBAME</span>
+                    <div className={styles.placeWorkingTime}>
+                        <div className={styles.placeDays}>
+                            <span>Pirmadienis </span>
+                            <span>Antradienis</span>
+                            <span>Trečiadienis </span>
+                            <span>Ketvirtadienis</span>
+                            <span>Penktadienis </span>
+                            <span>Šeštadienis</span>
+                            <span>Sekmadienis</span>
+                        </div>
+                        <div className={styles.placeTime}>
+                            <span>9.00-18.00</span>
+                            <span>9.00-18.00</span>
+                            <span>9.00-18.00</span>
+                            <span>9.00-18.00</span>
+                            <span>9.00-18.00</span>
+                            <span>9.00-13.00</span>
+                            <span>NEDIRBAME</span>
+                        </div>
+                    </div>
                 </div> 
                 <div className={styles.placeTransmission}></div>
                 <div className={styles.placeRight}>

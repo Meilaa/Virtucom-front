@@ -26,7 +26,7 @@ function Footer() {
                         ></path>
                         </g>
                     </svg>
-                    <span>Turi klausimų? Paskambink </span>
+                    <span>Turite klausimų? Paskambinkite </span>
                     <a className={styles.phoneNumber} href="tel:+37061271545">+370 612 715 45</a>
                    
                 </div>
@@ -50,7 +50,7 @@ function Footer() {
                             </g>
                         </svg>
                         
-                        <a href="https://www.google.com/maps?q=S.+Daukanto+31,+Vilkaviškis" target="_blank" rel="noopener noreferrer">S. Daukanto 31, Vilkaviškis</a>
+                        <a href="https://www.google.com/maps?q=S.+Daukanto+31,+Vilkaviškis" target="_blank" rel="noopener noreferrer">S. Daukanto g. 31, Vilkaviškis</a>
 
                     </div>
                     <div className={styles.footerEmail}>
@@ -98,7 +98,7 @@ function Footer() {
                             </g>
                             </g>
                         </svg>
-                        <a href="https://www.facebook.com">Gintautas Kazakevičius</a>
+                        <a href="https://www.facebook.com">UAB GKSvirtucom</a>
 
                     </div>
                 </div>
