@@ -1,106 +1,107 @@
 .footerMiddle {
     height: 9.75rem; /* 156px */
-  }
-  
-  .footerInfo, .footerInfoBottom {
+}
+
+.footerInfo, .footerInfoBottom {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: space-evenly;
     height: 50%;
-  }
-  
-  .footerCallUs svg {
+}
+
+.footerCallUs svg {
     width: 1.875rem; /* 30px */
-  }
-  
-  .footerCallUs {
+}
+
+.footerCallUs {
     display: flex;
     justify-content: center;
     height: 50%;
     gap: 0.3125rem; /* 5px */
     align-items: center;
-    font-size: 1.875rem; /* 30px */
+    font-size: 1.5rem; /* Adjusted from 1.875rem (30px) to 1.5rem (24px) */
     line-height: 1em;
     font-family: 'Chivo', sans-serif;
-  }
-  
-  .phoneNumber {
-    font-size: 1.875rem; /* 30px */
+}
+
+.phoneNumber {
+    font-size: 1.5rem; /* Adjusted from 1.875rem (30px) to 1.5rem (24px) */
     line-height: 1em;
     font-family: 'Chivo', sans-serif;
     background: linear-gradient(to top, #B3469C 40%, #0299DC 60%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-  
-  .footerAddress svg {
+}
+
+.footerAddress svg {
     width: 1.125rem; /* 18px */
-  }
-  
-  .footerEmail, .footerAddress, .footerFb {
+}
+
+.footerEmail, .footerAddress, .footerFb {
     display: flex;
     align-items: center;
     gap: 0.5rem; /* 8px */
     height: 3.125rem; /* 50px */
-  }
-  
-  .footerEmail {
+}
+
+.footerEmail {
     gap: 0.625rem; /* 10px */
-  }
-  
-  .footerEmail svg {
+}
+
+.footerEmail svg {
     width: 1.125rem; /* 18px */
-  }
-  
-  .footerFb svg {
+}
+
+.footerFb svg {
     width: 1.125rem; /* 18px */
-  }
-  
-  .footerRights {
+}
+
+.footerRights {
     display: flex;
     justify-content: center;
     margin-top: 2.5rem; /* 40px */
     margin-bottom: 1.875rem; /* 30px */
-  }
-  
-  @media only screen and (max-width: 47.9375rem) { /* 767px */
+}
+
+@media only screen and (max-width: 47.9375rem) { /* 767px */
     .footerInfo {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .footerMiddle {
-      height: auto;
+        height: auto;
     }
-  
+
     .footerCallUs {
-      padding: 1.5625rem 0; /* 25px 0 */
+        padding: 1.5625rem 0; /* 25px 0 */
+        font-size: 1.25rem; /* Adjusted from 1.5625rem (25px) to 1.25rem (20px) */
+        line-height: 0.8em;
     }
-  
+
     .footerRights {
-      margin: 0.9375rem 0; /* 15px 0 */
-      margin-bottom: 2.5rem; /* 40px */
+        margin: 0.9375rem 0; /* 15px 0 */
+        margin-bottom: 2.5rem; /* 40px */
     }
-  
+
     .phoneNumber {
-      font-size: 1.5625rem; /* 25px */
-      line-height: 0.8em;
+        font-size: 1.25rem; /* Adjusted from 1.5625rem (25px) to 1.25rem (20px) */
+        line-height: 0.8em;
     }
-  
+
     .footerCallUs {
-      font-size: 1.5625rem; /* 25px */
-      line-height: 0.8em;
-      flex-direction: column;
-      gap: 1.25rem; /* 20px */
+        font-size: 1.25rem; /* Adjusted from 1.5625rem (25px) to 1.25rem (20px) */
+        line-height: 0.8em;
+        flex-direction: column;
+        gap: 1.25rem; /* 20px */
     }
-  
+
     .footerCallUs svg {
-      display: none;
+        display: none;
     }
-  
+
     .footerInfoBottom {
-      padding: 1.25rem 0; /* 20px 0 */
+        padding: 1.25rem 0; /* 20px 0 */
     }
-  }
-  
+}
