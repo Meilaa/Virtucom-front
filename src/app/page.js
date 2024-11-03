@@ -6,7 +6,6 @@ import About from '../sections/about/About';
 import OfficeLocation from '../sections/place/Place';
 import Hero from '../sections/hero/Hero';
 import Services from '../sections/services/Services';
-import Head from 'next/head';
 
 export default function Home() {
   return (

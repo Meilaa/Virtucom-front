@@ -11,9 +11,9 @@ import styles from './Hero.module.css';
     },
     {
       image: '/programming.jpg', 
-      title: 'Internetinių svetainių įgyvendinimas',
+      title: 'Internetinių svetainių idėjų įgyvendinimas',
       subtitle: 'Išskirtinis svetainių kūrimas ir nuolatinė priežiūra',
-      description: 'Kuriame modernias svetaines su garantija, kad Jūsų idėjos taptų realybe.',
+      description: 'Kuriame modernias svetaines su garantija, kad Jūsų idėjos taps realybe.',
 
     },
     {

@@ -18,7 +18,7 @@ function About() {
                         <li className={styles.checkListItem}>GPS žemėlapių atnaujinimas</li>
                         <li className={styles.checkListItem}>Visų tipų įrenginių baterijų atnaujinimas</li>
                         <li className={styles.checkListItem}>Aukšto techninio lygio garso, vaizdo ir šviesos įrangos prekyba</li>
-                        <li className={styles.checkListItem}>Internetinių svetainių kūrimas</li>
+                        <li className={styles.checkListItem}>Internetinių svetainių ir parduotuvių kūrimas</li>
                     </ul>
                 </div>
             </div>
