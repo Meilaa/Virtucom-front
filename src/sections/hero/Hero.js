@@ -10,6 +10,13 @@ import styles from './Hero.module.css';
       description: 'Remontuojame visų tipų kompiuterius, naudojame tik kokybiškas dalis.',
     },
     {
+      image: '/programming.jpg', 
+      title: 'Internetinių svetainių įgyvendinimas',
+      subtitle: 'Išskirtinis svetainių kūrimas ir nuolatinė priežiūra',
+      description: 'Kuriame modernias svetaines su garantija, kad Jūsų idėjos taptų realybe.',
+
+    },
+    {
       image: '/hero2.png', 
       title: 'Naujausi sprendimai Jūsų išmaniesiems įrenginiams',
       subtitle: 'Patikimas išmaniųjų telefonų ir planšetinių kompiuterių remontas',
