@@ -18,21 +18,34 @@
 }
 
 .textContainer h1 {
-  font-size: 2.5rem;
+  font-size: 2rem; /* Adjusted to a more reasonable size */
   margin-bottom: 0.5rem; /* 8px */
 }
 
 .textContainer h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem; /* Adjusted to a more reasonable size */
   margin-bottom: 1rem; /* 16px */
 }
 
 .subtext {
-  font-size: 1rem;
+  font-size: 0.9rem; /* Adjusted to be slightly smaller */
 }
 
+/* Media Query for mobile screens */
 @media only screen and (max-width: 47.9375rem) { /* 767px */
   .partsSection {
     height: 31.25rem; /* 500px */
+  }
+
+  .textContainer h1 {
+    font-size: 1.8rem; /* Adjust for smaller screens */
+  }
+
+  .textContainer h2 {
+    font-size: 1.2rem; /* Adjust for smaller screens */
+  }
+
+  .subtext {
+    font-size: 0.8rem; /* Adjust for smaller screens */
   }
 }
