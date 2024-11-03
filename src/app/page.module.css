@@ -12,6 +12,6 @@
 }
 .html {
   scroll-behavior: smooth;
-  webkit-text-size-adjust: 100%; /* Prevent text resizing on mobile */
+  -webkit-text-size-adjust: 100%; /* Prevent text resizing on mobile */
   text-size-adjust: 100%; /* For non-webkit browsers */
 }
