@@ -77,7 +77,7 @@
         align-items: center;
         text-align: center;
         color: white;
-        font-size: 20px; /* 1.25rem converted to px */
-        padding: 20px; /* 1.25rem converted to px */
+        font-size: 16px; /* Keep font size consistent */
+        padding: 10px; /* Adjust padding for smaller screens */
     }
 }
