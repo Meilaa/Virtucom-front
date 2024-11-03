@@ -3,85 +3,98 @@
   flex-direction: column;
   justify-content: center;
 }
+
 .headerTop {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
-  height: 122px;
-  max-width: 1440px;
+  gap: 3.125rem; /* 50px */
+  height: 7.625rem; /* 122px */
+  max-width: 90rem; /* 1440px */
   margin: 0 auto;
   width: 100%;
-  font-size: 18px;
+  font-size: 1.125rem; /* 18px */
 }
+
 .logo {
-  width: 150px;  
+  width: 9.375rem; /* 150px */
 }
-.headerTop img{
+
+.headerTop img {
   height: auto;
 }
+
 .topHeaderSecond {
   display: flex;
-  flex-direction:  row;
-  gap: 10px;
+  flex-direction: row;
+  gap: 0.625rem; /* 10px */
   justify-content: center;
   align-items: center;
 }
-.topHeaderSecond svg{
-  width: 30px;
+
+.topHeaderSecond svg {
+  width: 1.875rem; /* 30px */
 }
+
 .topHeaderThird {
   display: flex;
-  flex-direction:  row;
-  gap: 10px;
+  flex-direction: row;
+  gap: 0.625rem; /* 10px */
   justify-content: center;
   align-items: center;
 }
+
 .topHeaderThird svg {
-  width: 30px; 
+  width: 1.875rem; /* 30px */
 }
+
 .topHeaderLast {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem; /* 20px */
 }
+
 .headerBottom {
   display: flex;
   flex-direction: row;
   background-color: #1E1E1E;
   color: #FFFFFF;
-  height: 64px;
-  padding: 0 200px;
+  height: 4rem; /* 64px */
+  padding: 0 12.5rem; /* 200px */
 }
-.headerBottom a{
+
+.headerBottom a {
   display: flex;
   justify-content: center;
   height: 100%;
   align-items: center;
   width: 100%;
 }
-@media only screen and (max-width: 767px) {
+
+@media only screen and (max-width: 47.9375rem) { /* 767px */
   .headerBottom {
     padding: 0;
-    height: 45px;
+    height: 2.8125rem; /* 45px */
   }
-  .headerBottom a{
-    font-size: 13px;
+
+  .headerBottom a {
+    font-size: 0.8125rem; /* 13px */
   }
 
   .headerTop a, .headerTop span {
-    font-size: 13px;
+    font-size: 0.8125rem; /* 13px */
   }
 
   .headerTop {
-    height: 85px;
-    gap: 20px;
+    height: 5.3125rem; /* 85px */
+    gap: 1.25rem; /* 20px */
     justify-content: inherit;
   }
   
   .topHeaderLast a {
     display: none;
   }
+  
   .topHeaderSecond {
     display: none;
   }

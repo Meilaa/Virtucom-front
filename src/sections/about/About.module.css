@@ -2,91 +2,104 @@
   background: linear-gradient(to top, #B3469C 40%, #0299DC 60%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  }
+}
+
 .aboutSection {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
+
 .aboutContainer {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap:50px;
-    padding: 30px 0;
-    max-width: 1440px;
-    margin: 0 auto;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3.125rem; /* 50px */
+  padding: 1.875rem 0; /* 30px 0 */
+  max-width: 90rem; /* 1440px */
+  margin: 0 auto;
+  width: 100%;
 }
+
 .aboutLeft {
-    width: 45%;
+  width: 45%;
 }
+
 .aboutLeft h1 {
-    font-family: 'Chivo', sans-serif;
-    font-size: 40px;
-    line-height: 30px;
+  font-family: 'Chivo', sans-serif;
+  font-size: 2.5rem; /* 40px */
+  line-height: 1.875rem; /* 30px */
 }
-.aboutLeft p{
-    font-size: 18px;
-    line-height: 28px;
-    padding: 30px 0;
+
+.aboutLeft p {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem; /* 28px */
+  padding: 1.875rem 0; /* 30px 0 */
 }
+
 .aboutRight {
-    width: 45%;
+  width: 45%;
 }
-  .checkList {
-    margin: 0;
-    padding-left: 1.2rem;
+
+.checkList {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.checkListItem {
+  position: relative;
+  list-style-type: none; /* Ensure no default bullet points are shown */
+  padding-left: 2.5rem; /* Space for the custom checkmark */
+  margin-bottom: 0.3125rem; /* 0.5rem space between list items */
+  line-height: 1.625rem; /* 26px */
+  font-weight: 600;
+  font-size: 1.125rem; /* 18px */
+}
+
+.checkListItem::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0; /* Position the checkmark at the start of the list item */
+  top: -0.125rem; /* -2px, adjust as necessary for vertical alignment */
+  width: 0.3125rem; /* 5px */
+  height: 0.6875rem; /* 11px */
+  border-width: 0 0.125rem 0.125rem 0; /* Make a checkmark shape */
+  border-style: solid;
+  color: #0299DC;
+  transform-origin: bottom left;
+  transform: rotate(45deg); /* Rotate to form a checkmark */
+}
+
+@media only screen and (max-width: 47.9375rem) { /* 767px */
+  .aboutContainer {
+    flex-direction: column;
+    gap: 0;
+    padding: 0.75rem 0; /* 12px 0 */
   }
-  
+
+  .aboutLeft {
+    width: 100%;
+    padding-left: 0.9375rem; /* 15px */
+  }
+
+  .aboutRight {
+    width: 100%;
+  }
+
+  .aboutLeft h1 {
+    font-size: 2.1875rem; /* 35px */
+    line-height: 2.1875rem; /* 35px */
+  }
+
+  .aboutLeft p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.25rem; /* 20px */
+    padding: 1.25rem 0; /* 20px 0 */
+  }
+
   .checkListItem {
-    position: relative;
-    list-style-type: none; /* Ensure no default bullet points are shown */
-    padding-left: 2.5rem; /* Space for the custom checkmark */
-    margin-bottom: 0.5rem; /* Space between list items */
-    line-height: 26px;
-    font-weight: 600;
-    font-size: 18px;
-  }
-  
-  .checkListItem::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0; /* Position the checkmark at the start of the list item */
-    top: -2px; /* Adjust this as necessary for vertical alignment */
-    width: 5px; /* Width of the checkmark */
-    height: 11px; /* Height of the checkmark */
-    border-width: 0 2px 2px 0; /* Make a checkmark shape */
-    border-style: solid; /* Style for the checkmark */
-    color: #0299DC; /* Color of the checkmark */
-    transform-origin: bottom left; /* Transform origin for rotation */
-    transform: rotate(45deg); /* Rotate to form a checkmark */
-  }
-  @media only screen and (max-width: 767px) {
-    .aboutContainer{
-      flex-direction: column;
-      gap: 0;
-      padding: 12px 0;
-    }
-    .aboutLeft {
-      width: 100%;
-      padding-left: 15px;
-    }
-    .aboutRight {
-      width: 100%;
-    }
-    .aboutLeft h1 {
-      font-size: 35px;
-      line-height: 35px;
-  }
-  .aboutLeft p{
-      font-size: 16px;
-      line-height: 20px;
-      padding: 20px 0;
-    }
-  .checkListItem {
-    line-height: 24px;
-    font-size: 16px;
+    line-height: 1.5rem; /* 24px */
+    font-size: 1rem; /* 16px */
   }
 }
