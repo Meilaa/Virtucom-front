@@ -19,7 +19,7 @@
   .pricesLeft h1, .pricesRight h1 {
     font-family: 'Chivo', sans-serif;
     font-size: 2.0rem; /* 40px */
-    line-height: 1.875rem; /* 30px */
+    line-height: 2.2rem; /* 30px */
     padding-bottom: 1.5rem;
   }
   .checkListItem {
@@ -50,7 +50,7 @@
     .pricesContainer {
       flex-direction: column;
       gap: 15px;
-      padding: 0.75rem 0; /* 12px 0 */
+      padding: 1.8rem 0; /* 12px 0 */
     }
   
     .pricesLeft {
