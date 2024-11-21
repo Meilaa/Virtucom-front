@@ -6,6 +6,8 @@ import About from '../sections/about/About';
 import OfficeLocation from '../sections/place/Place';
 import Hero from '../sections/hero/Hero';
 import Services from '../sections/services/Services';
+import Prices from '../sections/prices/Prices';
+import Programming from '../sections/programming/Programming';
 
 export default function Home() {
   return (
@@ -16,6 +18,8 @@ export default function Home() {
         <About />
         <Services />
         <List />
+        <Programming />
+        <Prices />
         <OfficeLocation />
         <Footer />
       </main>

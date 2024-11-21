@@ -116,6 +116,9 @@ function Header() {
                     <a href="#services" className={styles.link} onClick={handleSmoothScroll}>
                         PASLAUGOS
                     </a>
+                    <a href="#price" className={styles.link} onClick={handleSmoothScroll}>
+                        KAINOS
+                    </a>
                     <a href="#place" className={styles.link} onClick={handleSmoothScroll}>
                         PARDUOTUVĖ
                     </a>
