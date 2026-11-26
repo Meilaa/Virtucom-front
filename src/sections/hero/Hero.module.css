@@ -1,51 +1,134 @@
 .partsSection {
+  position: relative;
   width: 100%;
-  height: 38.75rem; /* 620px */
+  min-height: min(88vh, 42rem);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #1e1e1e;
+  background-color: var(--charcoal);
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(10, 14, 20, 0.25) 0%, rgba(10, 14, 20, 0.72) 70%, rgba(10, 14, 20, 0.88) 100%),
+    linear-gradient(90deg, rgba(2, 153, 220, 0.18), transparent 45%);
+  pointer-events: none;
 }
 
 .textContainer {
-  text-align: center;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.55);
-  padding: 1.25rem;
-  width: 100%;
+  position: relative;
+  z-index: 1;
+  width: min(100% - 2rem, var(--max));
+  margin: 0 auto 3.5rem;
+  color: #fff;
+  animation: fade-slide 0.7s ease both;
+}
+
+.brandMark {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.85rem;
+  color: #fff;
+  text-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.35);
 }
 
 .textContainer h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.textContainer h2 {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
+  color: #fff;
+  font-size: clamp(1.7rem, 4.2vw, 3.1rem);
+  max-width: 16ch;
+  margin-bottom: 0.75rem;
 }
 
 .subtext {
-  font-size: 0.9rem;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  max-width: 34ch;
+  color: rgba(255, 255, 255, 0.88);
+  margin-bottom: 1.5rem;
 }
 
-@media only screen and (max-width: 47.9375rem) { /* 767px */
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.85rem;
+  padding: 0.7rem 1.35rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.ctaPrimary {
+  background: var(--brand);
+  color: #fff;
+}
+
+.ctaPrimary:hover {
+  background: var(--brand-deep);
+  transform: translateY(-1px);
+}
+
+.ctaSecondary {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.ctaSecondary:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.dots {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.4rem;
+}
+
+.dot,
+.dotActive {
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.dotActive {
+  background: #fff;
+  width: 1.35rem;
+  border-radius: 999px;
+}
+
+@media only screen and (max-width: 47.9375rem) {
   .partsSection {
-    height: 31.25rem; /* 500px */
+    min-height: 34rem;
   }
 
-  .textContainer h1 {
-    font-size: 1.8rem;
+  .textContainer {
+    margin-bottom: 3rem;
   }
 
-  .textContainer h2 {
-    font-size: 1.2rem;
-  }
-
-  .subtext {
-    font-size: 0.8rem;
+  .brandMark {
+    font-size: 1.55rem;
   }
 }

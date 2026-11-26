@@ -107,7 +107,7 @@ function Footer() {
                 <span>Įm. kodas 185285648 / PVM kodas LT852856412</span>
               </div>
               <div className={styles.footerRights}>
-                <span>© 2024 GKSvirtucom</span>
+                <span>© {new Date().getFullYear()} GKSvirtucom</span>
               </div>
             </div>
         </section>

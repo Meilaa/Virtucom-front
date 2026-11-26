@@ -1,69 +1,64 @@
-.pricesContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 4rem; /* 50px */
-    padding: 2rem 0; /* 30px 0 */
-    max-width: 90rem; /* 1440px */
-    margin: 0 auto;
-    width: 100%;
+.pricesSection {
+  padding: clamp(3rem, 7vw, 5rem) 0;
 }
+
+.pricesContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  width: min(100% - 2rem, var(--max));
+  margin: 0 auto;
+}
+
+.pricesLeft,
+.pricesRight {
+  padding: 1.5rem 1.4rem 1.7rem;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid var(--line);
+}
+
+.pricesLeft h1,
+.pricesRight h1 {
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  line-height: 1.25;
+  margin-bottom: 1.2rem;
+}
+
 .highlight {
-    background: linear-gradient(to top, #B3469C 40%, #0299DC 60%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+  color: var(--brand);
+  background: none;
+  -webkit-text-fill-color: unset;
+}
+
 .checkList {
-    margin: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.checkListItem {
+  position: relative;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.checkListItem::before {
+  content: "";
+  position: absolute;
+  left: 0.1rem;
+  top: 0.35rem;
+  width: 0.32rem;
+  height: 0.65rem;
+  border: solid var(--brand);
+  border-width: 0 0.13rem 0.13rem 0;
+  transform: rotate(45deg);
+}
+
+@media only screen and (max-width: 47.9375rem) {
+  .pricesContainer {
+    grid-template-columns: 1fr;
   }
-  .pricesLeft h1, .pricesRight h1 {
-    font-family: 'Chivo', sans-serif;
-    font-size: 2.0rem; /* 40px */
-    line-height: 2.2rem; /* 30px */
-    padding-bottom: 1.5rem;
-  }
-  .checkListItem {
-    position: relative;
-    list-style-type: none; /* Ensure no default bullet points are shown */
-    padding-left: 2.5rem; /* Space for the custom checkmark */
-    margin-bottom: 0.3125rem; /* 0.5rem space between list items */
-    line-height: 1.625rem; /* 26px */
-    font-weight: 600;
-    font-size: 1.125rem; /* 18px */
-  }
-  
-  .checkListItem::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0; /* Position the checkmark at the start of the list item */
-    top: -0.125rem; /* -2px, adjust as necessary for vertical alignment */
-    width: 0.3125rem; /* 5px */
-    height: 0.6875rem; /* 11px */
-    border-width: 0 0.125rem 0.125rem 0; /* Make a checkmark shape */
-    border-style: solid;
-    color: #0299DC;
-    transform-origin: bottom left;
-    transform: rotate(45deg); /* Rotate to form a checkmark */
-  }
-  @media only screen and (max-width: 47.9375rem) { /* 767px */
-    .pricesContainer {
-      flex-direction: column;
-      gap: 15px;
-      padding: 1.8rem 0; /* 12px 0 */
-    }
-  
-    .pricesLeft {
-      width: 100%;
-      padding-left: 1.5rem; /* 15px */
-    }
-  
-    .pricesRight {
-      width: 100%;
-      padding-left: 1.5rem; /* 15px */
-    }
-    .checkListItem {
-      line-height: 1.5rem; /* 24px */
-      font-size: 1rem; /* 16px */
-    }
-  }
+}

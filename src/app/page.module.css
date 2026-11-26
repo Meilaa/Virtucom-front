@@ -1,17 +1,8 @@
 .page {
-  display: grid;
-  grid-template-rows: auto 1fr; /* Adjust as needed */
-  align-items: center;
-  justify-items: center;
   min-height: 100vh;
-  font-family: sans-serif; /* Updated for simplicity */
 }
 
 .main {
   width: 100%;
-}
-.html {
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%; /* Prevent text resizing on mobile */
-  text-size-adjust: 100%; /* For non-webkit browsers */
+  overflow-x: clip;
 }

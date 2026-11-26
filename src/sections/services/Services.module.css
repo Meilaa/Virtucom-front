@@ -1,83 +1,82 @@
-.servicesSection  { 
-    width: 100%;
+.servicesSection {
+  width: 100%;
 }
 
 .servicesContainer {
-    display: flex;
-    flex-direction: row;
-    background-color: #1E1E1E;
-    width: 100%;
-    height: 450px;  /* 28.125rem converted to px */
-    position: relative;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  min-height: 26rem;
+  background: var(--charcoal);
+  overflow: hidden;
 }
 
 .servicesContainer img {
-    width: 66%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.78;
 }
 
 .servicesTransmission {
-    width: 66%;
-    height: 100%; 
-    position: absolute; 
-    top: 0;
-    left: 0;
-    background: linear-gradient(to left, #1E1E1E 20%, rgba(13,85,144, 0.2) 80%);
-    z-index: 1; 
-    opacity: 1; 
+  position: absolute;
+  inset: 0 34% 0 0;
+  background: linear-gradient(90deg, rgba(2, 153, 220, 0.2), rgba(23, 26, 31, 0.92) 78%);
+  pointer-events: none;
 }
 
 .servicesRight {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    width: 34%;
-    font-size: 18px; /* 18px remains the same */
-    line-height: 32px; /* 2rem converted to px */
-    z-index: 2; /* Ensure text is above both gradient and image */
-    gap: 8px; /* 0.3125rem converted to px */
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.85rem;
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  color: #fff;
 }
 
-/* Media Query for stacking the elements */
-@media only screen and (max-width: 767px) { /* 47.9375rem converted to 767px */
-    .servicesContainer {
-        position: relative;
-        display: block; /* Remove flex to allow stacking */
-        height: 350px; /* 21.875rem converted to px */
-    }
+.servicesRight span:first-child {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.6vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
 
-    .servicesContainer img,
-    .servicesTransmission,
-    .servicesRight {
-        position: absolute; /* Stack everything on top of each other */
-        top: 0;
-        left: 0;
-        width: 100%; /* Ensure all elements take full width */
-        height: 100%; /* Ensure all elements take full height */
-    }
+.servicesRight span:last-child {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  max-width: 28ch;
+}
 
-    .servicesContainer img {
-        z-index: 1; /* Image at the bottom */
-        opacity: 0.5; /* Lower opacity for better readability of text */
-    }
+@media only screen and (max-width: 767px) {
+  .servicesContainer {
+    grid-template-columns: 1fr;
+    min-height: 22rem;
+  }
 
-    .servicesTransmission {
-        z-index: 2; /* Gradient above the image */
-        background: linear-gradient(to bottom, #1E1E1E 20%, rgba(13,85,144, 0.2) 80%);
-        opacity: 0.8; /* Slightly opaque to blend with the image */
-    }
+  .servicesContainer img,
+  .servicesTransmission,
+  .servicesRight {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-    .servicesRight {
-        z-index: 3; /* Text on top */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-        font-size: 16px; /* Keep font size consistent */
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
+  .servicesContainer img {
+    opacity: 0.4;
+  }
+
+  .servicesTransmission {
+    background: linear-gradient(180deg, rgba(23, 26, 31, 0.35), rgba(23, 26, 31, 0.88));
+  }
+
+  .servicesRight {
+    justify-content: flex-end;
+    padding: 1.5rem 1.15rem 1.75rem;
+    text-align: left;
+  }
 }
