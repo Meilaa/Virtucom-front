@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Virtucom Front
 
-## Getting Started
+Next.js marketing site for **UAB GKSvirtucom**, deployed to **Cloudflare Workers** via [`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare).
 
-First, run the development server:
+## Getting started
 
 ```bash
+npm install
+cp .env.example .env.local
+# set NEXT_PUBLIC_GOOGLE_MAPS_API_KEY in .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Cloudflare Workers
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Script | Purpose |
+| --- | --- |
+| `npm run preview` | Build and run locally in the Workers runtime |
+| `npm run deploy` | Build and deploy to Cloudflare Workers |
+| `npm run upload` | Build and upload a new Worker version (gradual deploy) |
+| `npm run cf-typegen` | Generate Cloudflare binding types |
 
-## Learn More
+### First-time deploy
 
-To learn more about Next.js, take a look at the following resources:
+1. Install the [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/) (already a project dependency).
+2. Log in: `npx wrangler login`
+3. Optionally set secrets / vars for production:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npx wrangler secret put NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   For public `NEXT_PUBLIC_*` values you can also put them under `[vars]` in `wrangler.jsonc` or configure them in the Cloudflare dashboard.
+4. Deploy:
 
-## Deploy on Vercel
+   ```bash
+   npm run deploy
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+You can also connect this GitHub repo in the [Cloudflare dashboard](https://dash.cloudflare.com/) so each merge to your production branch builds and deploys automatically.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Environment variables
+
+| Name | Required | Description |
+| --- | --- | --- |
+| `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | Recommended | Google Maps Embed API key for the location map |
+
+Copy `.env.example` to `.env.local` for local Next.js development, and `.dev.vars.example` to `.dev.vars` for `npm run preview`.
