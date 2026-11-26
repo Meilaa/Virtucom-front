@@ -37,7 +37,11 @@ Open [http://localhost:3000](http://localhost:3000).
    npm run deploy
    ```
 
-The Worker name is `virtucom-front` (see `wrangler.jsonc`). After the first deploy you get a `*.workers.dev` URL; attach a custom domain in the Cloudflare dashboard if needed.
+The Worker name is `virtucom-front` (see `wrangler.jsonc`).
+
+**Live:** [https://virtucom-front.lovediary.workers.dev](https://virtucom-front.lovediary.workers.dev)
+
+Attach a custom domain in the Cloudflare dashboard if needed.
 
 You can also connect this GitHub repo under **Workers → Create → Git integration** so production deploys on every merge to `main`.
 
