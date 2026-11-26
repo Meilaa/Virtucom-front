@@ -16,5 +16,8 @@
   ],
   "images": {
     "binding": "IMAGES"
+  },
+  "vars": {
+    "NEXT_PUBLIC_GOOGLE_MAPS_API_KEY": "AIzaSyCekG6e4NSZ4cWIa9hmqrX0-oNyM5kqqU0"
   }
 }

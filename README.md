@@ -1,19 +1,18 @@
 # Virtucom Front
 
-Next.js marketing site for **UAB GKSvirtucom**, deployed to **Cloudflare Workers** via [`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare).
+Next.js marketing site for **UAB GKSvirtucom**, migrated from **Vercel** to **Cloudflare Workers** via [`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare).
 
-## Getting started
+## Local development
 
 ```bash
 npm install
-cp .env.example .env.local
-# set NEXT_PUBLIC_GOOGLE_MAPS_API_KEY in .env.local
+cp .env.example .env.local   # or use the committed .dev.vars for Workers preview
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## Cloudflare Workers
+## Cloudflare Workers (production)
 
 | Script | Purpose |
 | --- | --- |
@@ -22,29 +21,37 @@ Open [http://localhost:3000](http://localhost:3000).
 | `npm run upload` | Build and upload a new Worker version (gradual deploy) |
 | `npm run cf-typegen` | Generate Cloudflare binding types |
 
-### First-time deploy
+### Deploy
 
-1. Install the [Wrangler CLI](https://developers.cloudflare.com/workers/wrangler/) (already a project dependency).
-2. Log in: `npx wrangler login`
-3. Optionally set secrets / vars for production:
+1. Create an API token in the [Cloudflare dashboard](https://dash.cloudflare.com/profile/api-tokens) with **Workers Scripts Edit** + **Account Settings Read**.
+2. Set credentials locally (or in CI):
 
    ```bash
-   npx wrangler secret put NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+   export CLOUDFLARE_API_TOKEN=...
+   export CLOUDFLARE_ACCOUNT_ID=...
    ```
 
-   For public `NEXT_PUBLIC_*` values you can also put them under `[vars]` in `wrangler.jsonc` or configure them in the Cloudflare dashboard.
-4. Deploy:
+3. Deploy:
 
    ```bash
    npm run deploy
    ```
 
-You can also connect this GitHub repo in the [Cloudflare dashboard](https://dash.cloudflare.com/) so each merge to your production branch builds and deploys automatically.
+The Worker name is `virtucom-front` (see `wrangler.jsonc`). After the first deploy you get a `*.workers.dev` URL; attach a custom domain in the Cloudflare dashboard if needed.
+
+You can also connect this GitHub repo under **Workers → Create → Git integration** so production deploys on every merge to `main`.
+
+### Leaving Vercel
+
+- This repo includes `vercel.json` that **skips Vercel builds** (`ignoreCommand` exits 0).
+- Disconnect the project in the [Vercel dashboard](https://vercel.com/dashboard) so the blocked-account check stops failing on PRs.
+- Point DNS / custom domains at Cloudflare instead of `virtucom-front.vercel.app`.
 
 ## Environment variables
 
 | Name | Required | Description |
 | --- | --- | --- |
-| `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | Recommended | Google Maps Embed API key for the location map |
+| `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | Yes (for the map) | Google Maps Embed API key |
 
-Copy `.env.example` to `.env.local` for local Next.js development, and `.dev.vars.example` to `.dev.vars` for `npm run preview`.
+Local: `.env.local` or `.dev.vars` (both gitignored).  
+Production: `vars` in `wrangler.jsonc` (or Cloudflare dashboard → Worker → Settings → Variables).
