@@ -26,7 +26,7 @@
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* 4px 8px */
 }
 
-.card.hovered {
+.card:hover {
   background-color: white;
 }
 
@@ -34,10 +34,16 @@
   position: absolute;
   top: 1.25rem; /* 20px */
   left: 1.25rem; /* 20px */
+  right: 1.25rem; /* 20px */
   z-index: 2;
   color: #0299DC;
   font-size: 1.5rem;
+  line-height: 1.25;
   transition: color 0.4s ease;
+}
+
+.hiddenText {
+  display: none;
 }
 
 .repairText {
@@ -61,8 +67,12 @@
   transition: opacity 0.4s ease, color 0.4s ease;
 }
 
-.card.hovered .overlay {
+.card:hover .overlay {
   opacity: 1;
+}
+
+.card:hover .text {
+  opacity: 0;
 }
 
 .card img {
@@ -74,7 +84,7 @@
   transform: scale(1);
 }
 
-.card.hovered img {
+.card:hover img {
   opacity: 0;
   transform: scale(1.2);
 }
