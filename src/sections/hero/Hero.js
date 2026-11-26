@@ -4,7 +4,7 @@ import styles from './Hero.module.css';
 
 const backgrounds = [
   {
-    image: '/hero1.webp',
+    image: '/hero2.png',
     title: 'Kokybiškas kompiuterių remontas',
     subtitle: 'Greitas aptarnavimas ir prieinamos kainos',
     description: 'Remontuojame visų tipų kompiuterius, naudojame tik kokybiškas dalis.',
@@ -16,7 +16,7 @@ const backgrounds = [
     description: 'Kuriame modernias svetaines su garantija, kad Jūsų idėjos taps realybe.',
   },
   {
-    image: '/hero2.png',
+    image: '/tablet_repair.jpg',
     title: 'Naujausi sprendimai Jūsų išmaniesiems įrenginiams',
     subtitle: 'Patikimas išmaniųjų telefonų ir planšetinių kompiuterių remontas',
     description: 'Remontas su garantija.',
