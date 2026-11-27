@@ -14,7 +14,7 @@ function Place() {
         <section className={styles.placeSection} id='place'>
             <div className={styles.placeContainer}>
                 <div className={styles.placeLeft}>
-                    <h3>Darbo laikas</h3>
+                    <h2>Darbo laikas</h2>
                     <div className={styles.placeWorkingTime}>
                         <div className={styles.placeDays}>
                             <span>Pirmadienis </span>

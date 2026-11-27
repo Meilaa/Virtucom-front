@@ -65,3 +65,5 @@ You can also connect this GitHub repo under **Workers → Create → Git integra
 
 Local: `.env.local` or `.dev.vars` (both gitignored).  
 Production: `vars` in `wrangler.jsonc` (or Cloudflare dashboard → Worker → Settings → Variables).
+
+Restrict the Maps key in Google Cloud Console to HTTP referrers `https://virtucom.lt/*` and `https://www.virtucom.lt/*` (and localhost for development), and enable only the Maps Embed API.

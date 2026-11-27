@@ -47,7 +47,7 @@
 
 .footerEmail,
 .footerAddress,
-.footerFb {
+.footerHours {
   display: flex;
   align-items: center;
   gap: 0.55rem;
@@ -56,14 +56,12 @@
 }
 
 .footerEmail:hover,
-.footerAddress:hover,
-.footerFb:hover {
+.footerAddress:hover {
   color: var(--brand);
 }
 
 .footerAddress svg,
-.footerEmail svg,
-.footerFb svg {
+.footerEmail svg {
   width: 1.05rem;
   height: auto;
   flex-shrink: 0;

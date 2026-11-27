@@ -39,9 +39,13 @@
   text-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.35);
 }
 
-.textContainer h1 {
+.slideTitle {
   color: #fff;
+  font-family: var(--font-display);
   font-size: clamp(1.7rem, 4.2vw, 3.1rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
   max-width: 16ch;
   margin-bottom: 0.75rem;
 }
@@ -107,10 +111,19 @@
 
 .dot,
 .dotActive {
-  width: 0.45rem;
-  height: 0.45rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  padding: 0;
+  border: 0;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+}
+
+.dot:focus-visible,
+.dotActive:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
 }
 
 .dotActive {

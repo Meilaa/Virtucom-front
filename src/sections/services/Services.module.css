@@ -36,15 +36,14 @@
   color: #fff;
 }
 
-.servicesRight span:first-child {
-  font-family: var(--font-display);
+.servicesRight h2 {
+  color: #fff;
   font-size: clamp(1.35rem, 2.6vw, 2rem);
-  font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
 
-.servicesRight span:last-child {
+.servicesRight p {
   color: rgba(255, 255, 255, 0.82);
   font-size: 1.02rem;
   line-height: 1.6;

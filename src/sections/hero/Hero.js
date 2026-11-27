@@ -4,17 +4,17 @@ import styles from "./Hero.module.css";
 
 const backgrounds = [
   {
-    image: "/hero2.png",
+    image: "/hero2.webp",
     title: "Kokybiškas kompiuterių remontas",
     subtitle: "Greitas aptarnavimas ir prieinamos kainos",
   },
   {
-    image: "/programming.jpg",
+    image: "/programming-hero.webp",
     title: "Internetinių svetainių idėjų įgyvendinimas",
     subtitle: "Išskirtinis svetainių kūrimas ir nuolatinė priežiūra",
   },
   {
-    image: "/tablet_repair.jpg",
+    image: "/tablet-hero.webp",
     title: "Naujausi sprendimai Jūsų išmaniesiems įrenginiams",
     subtitle: "Patikimas telefonų ir planšetinių kompiuterių remontas",
   },
@@ -29,7 +29,7 @@ const backgrounds = [
     subtitle: "Išskirtinė priežiūra Jūsų biuro technikai",
   },
   {
-    image: "/hero5.jpg",
+    image: "/hero5.webp",
     title: "Garso ir vaizdo sistemų diegimas",
     subtitle: "Renginių įgarsinimas ir sistemų projektavimas",
   },
@@ -39,13 +39,11 @@ const PartsSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    backgrounds.forEach(({ image }) => {
-      const img = new window.Image();
-      img.src = image;
-    });
-  }, []);
+    const prefersReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReduced) return undefined;
 
-  useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % backgrounds.length);
     }, 10000);
@@ -53,18 +51,25 @@ const PartsSection = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const next = backgrounds[(currentIndex + 1) % backgrounds.length];
+    const img = new window.Image();
+    img.src = next.image;
+  }, [currentIndex]);
+
   const { image, title, subtitle } = backgrounds[currentIndex];
 
   return (
     <section
       className={styles.partsSection}
       style={{ backgroundImage: `url(${image})` }}
-      aria-live="polite"
+      aria-roledescription="carousel"
+      aria-label="Paslaugų pristatymas"
     >
-      <div className={styles.veil} />
-      <div className={styles.textContainer} key={currentIndex}>
-        <p className={styles.brandMark}>GKSvirtucom</p>
-        <h1>{title}</h1>
+      <div className={styles.veil} aria-hidden="true" />
+      <div className={styles.textContainer} key={currentIndex} aria-live="polite">
+        <h1 className={styles.brandMark}>GKSvirtucom</h1>
+        <p className={styles.slideTitle}>{title}</p>
         <p className={styles.subtext}>{subtitle}</p>
         <div className={styles.ctaRow}>
           <a className={styles.ctaPrimary} href="tel:+37061271545">
@@ -75,11 +80,16 @@ const PartsSection = () => {
           </a>
         </div>
       </div>
-      <div className={styles.dots} aria-hidden="true">
-        {backgrounds.map((_, i) => (
-          <span
-            key={i}
+      <div className={styles.dots} role="tablist" aria-label="Skaidrės">
+        {backgrounds.map((slide, i) => (
+          <button
+            key={slide.title}
+            type="button"
+            role="tab"
+            aria-selected={i === currentIndex}
+            aria-label={`Rodyti: ${slide.title}`}
             className={i === currentIndex ? styles.dotActive : styles.dot}
+            onClick={() => setCurrentIndex(i)}
           />
         ))}
       </div>
