@@ -67,3 +67,10 @@ Local: `.env.local` or `.dev.vars` (both gitignored).
 Production: `vars` in `wrangler.jsonc` (or Cloudflare dashboard → Worker → Settings → Variables).
 
 Restrict the Maps key in Google Cloud Console to HTTP referrers `https://virtucom.lt/*` and `https://www.virtucom.lt/*` (and localhost for development), and enable only the Maps Embed API.
+
+## Shop catalog (ACME-ready)
+
+- Public catalog: [`/parduotuve`](http://localhost:3000/parduotuve)
+- Product data lives in `src/lib/acme/` with ACME/ACC-shaped fields (`supplierCode`, vendor, stock, specs)
+- Today it uses a mock catalog; swap `loadProducts()` in `src/lib/acme/catalog.js` for the real ACME SOAP API when you have a license key
+- No online checkout yet — product pages CTA to phone / email

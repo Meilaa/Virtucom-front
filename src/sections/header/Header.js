@@ -2,18 +2,27 @@
 
 import styles from "./Header.module.css";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function Header() {
-  const handleSmoothScroll = (event) => {
-    event.preventDefault();
-    const targetId = event.currentTarget.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
+  const pathname = usePathname();
+  const onHome = pathname === "/";
 
-    if (targetElement) {
-      targetElement.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+  const handleSmoothScroll = (event) => {
+    const href = event.currentTarget.getAttribute("href");
+    if (!href?.startsWith("/#") && !href?.startsWith("#")) return;
+
+    if (onHome) {
+      event.preventDefault();
+      const targetId = href.includes("#") ? `#${href.split("#")[1]}` : href;
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
     }
   };
 
@@ -24,14 +33,16 @@ function Header() {
       </a>
       <div className={styles.headerContainer}>
         <div className={styles.headerTop}>
-          <Image
-            className={styles.logo}
-            src="/logo.webp"
-            alt="GKSvirtucom"
-            width={400}
-            height={100}
-            priority
-          />
+          <Link href="/" className={styles.logoLink} aria-label="GKSvirtucom pradžia">
+            <Image
+              className={styles.logo}
+              src="/logo.webp"
+              alt="GKSvirtucom"
+              width={400}
+              height={100}
+              priority
+            />
+          </Link>
           <div className={styles.topHeaderSecond}>
             <svg
               fill="#0299DC"
@@ -97,29 +108,36 @@ function Header() {
           </div>
         </div>
         <nav className={styles.headerBottom} aria-label="Pagrindinė navigacija">
-          <a href="#about" className={styles.link} onClick={handleSmoothScroll}>
+          <Link href="/#about" className={styles.link} onClick={handleSmoothScroll}>
             Apie
-          </a>
-          <a
-            href="#services"
+          </Link>
+          <Link
+            href="/#services"
             className={styles.link}
             onClick={handleSmoothScroll}
           >
             Paslaugos
-          </a>
-          <a href="#price" className={styles.link} onClick={handleSmoothScroll}>
+          </Link>
+          <Link href="/#price" className={styles.link} onClick={handleSmoothScroll}>
             Kainos
-          </a>
-          <a href="#place" className={styles.link} onClick={handleSmoothScroll}>
+          </Link>
+          <Link
+            href="/parduotuve"
+            className={
+              pathname?.startsWith("/parduotuve")
+                ? `${styles.link} ${styles.linkActive}`
+                : styles.link
+            }
+          >
             Parduotuvė
-          </a>
-          <a
-            href="#footer"
+          </Link>
+          <Link
+            href="/#footer"
             className={styles.link}
             onClick={handleSmoothScroll}
           >
             Kontaktai
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

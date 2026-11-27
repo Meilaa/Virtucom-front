@@ -1,9 +1,17 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./List.module.css";
 
-const RepairCard = ({ imageSrc, altText, repairType, subtitle, description }) => {
-  return (
-    <article className={styles.card} tabIndex={0}>
+const RepairCard = ({
+  imageSrc,
+  altText,
+  repairType,
+  subtitle,
+  description,
+  href,
+}) => {
+  const inner = (
+    <>
       <Image src={imageSrc} alt={altText} width={200} height={200} />
       <div className={styles.cardBody}>
         <div className={styles.text}>
@@ -14,6 +22,20 @@ const RepairCard = ({ imageSrc, altText, repairType, subtitle, description }) =>
           <p>{description}</p>
         </div>
       </div>
+    </>
+  );
+
+  if (href) {
+    return (
+      <Link href={href} className={styles.card}>
+        {inner}
+      </Link>
+    );
+  }
+
+  return (
+    <article className={styles.card} tabIndex={0}>
+      {inner}
     </article>
   );
 };
@@ -56,12 +78,13 @@ const List = () => {
         subtitle="Naujinimas"
         description="GPS navigacijų žemėlapių atnaujinimas, užtikrinantis naujausią informaciją Jūsų prietaisuose."
       />
-      <RepairCard
-        imageSrc="/shop.svg"
-        altText=""
-        repairType="Prekyba"
-        description="Prekyba įvairiais technologiniais ir elektroniniais prietaisais."
-      />
+    <RepairCard
+      imageSrc="/shop.svg"
+      altText=""
+      repairType="Prekyba"
+      description="Kompiuteriai, TV, telefonai ir IT prekės – atidaryti katalogą."
+      href="/parduotuve"
+    />
     </section>
   );
 };

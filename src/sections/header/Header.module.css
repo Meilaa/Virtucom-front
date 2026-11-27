@@ -38,9 +38,19 @@
   color: var(--ink-soft);
 }
 
+.logoLink {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
 .logo {
   width: 8.5rem;
   height: auto;
+}
+
+.linkActive {
+  color: var(--brand) !important;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .headerTop img {
