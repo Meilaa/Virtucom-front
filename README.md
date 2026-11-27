@@ -39,9 +39,15 @@ Open [http://localhost:3000](http://localhost:3000).
 
 The Worker name is `virtucom-front` (see `wrangler.jsonc`).
 
-**Live:** [https://virtucom-front.lovediary.workers.dev](https://virtucom-front.lovediary.workers.dev)
+**Live**
 
-Attach a custom domain in the Cloudflare dashboard if needed.
+| Host | URL |
+| --- | --- |
+| Production | [https://virtucom.lt](https://virtucom.lt) |
+| www | [https://www.virtucom.lt](https://www.virtucom.lt) |
+| workers.dev | [https://virtucom-front.lovediary.workers.dev](https://virtucom-front.lovediary.workers.dev) |
+
+Custom domains `virtucom.lt` and `www.virtucom.lt` are attached to Worker `virtucom-front`. Email MX/TXT records were left unchanged.
 
 You can also connect this GitHub repo under **Workers → Create → Git integration** so production deploys on every merge to `main`.
 
@@ -49,7 +55,7 @@ You can also connect this GitHub repo under **Workers → Create → Git integra
 
 - This repo includes `vercel.json` that **skips Vercel builds** (`ignoreCommand` exits 0).
 - Disconnect the project in the [Vercel dashboard](https://vercel.com/dashboard) so the blocked-account check stops failing on PRs.
-- Point DNS / custom domains at Cloudflare instead of `virtucom-front.vercel.app`.
+- Vercel A/CNAME origins for `@` and `www` have been removed from the Cloudflare zone.
 
 ## Environment variables
 
