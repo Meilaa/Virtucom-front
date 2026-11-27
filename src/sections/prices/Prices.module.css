@@ -1,27 +1,35 @@
 .pricesSection {
-  padding: clamp(3rem, 7vw, 5rem) 0;
+  padding: clamp(3.5rem, 8vw, 6rem) 0;
 }
 
 .pricesContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(1.25rem, 3vw, 2.5rem);
+  gap: clamp(1rem, 2.5vw, 1.75rem);
   width: min(100% - 2rem, var(--max));
   margin: 0 auto;
 }
 
 .pricesLeft,
 .pricesRight {
-  padding: 1.5rem 1.4rem 1.7rem;
-  background: rgba(255, 255, 255, 0.75);
+  padding: 1.7rem 1.55rem 1.85rem;
+  background: var(--surface);
   border: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+  transition: border-color 0.25s ease, transform 0.3s var(--ease);
+}
+
+.pricesLeft:hover,
+.pricesRight:hover {
+  border-color: rgba(2, 153, 220, 0.35);
+  transform: translateY(-0.15rem);
 }
 
 .pricesLeft h2,
 .pricesRight h2 {
-  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
-  line-height: 1.25;
-  margin-bottom: 1.2rem;
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  line-height: 1.2;
+  margin-bottom: 1.3rem;
 }
 
 .highlight {
@@ -33,12 +41,12 @@
 .checkList {
   list-style: none;
   display: grid;
-  gap: 0.55rem;
+  gap: 0.7rem;
 }
 
 .checkListItem {
   position: relative;
-  padding-left: 1.5rem;
+  padding-left: 1.35rem;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.45;
@@ -48,17 +56,20 @@
 .checkListItem::before {
   content: "";
   position: absolute;
-  left: 0.1rem;
-  top: 0.35rem;
-  width: 0.32rem;
-  height: 0.65rem;
-  border: solid var(--brand);
-  border-width: 0 0.13rem 0.13rem 0;
-  transform: rotate(45deg);
+  left: 0;
+  top: 0.55rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: var(--brand);
 }
 
 @media only screen and (max-width: 47.9375rem) {
   .pricesContainer {
     grid-template-columns: 1fr;
+  }
+
+  .pricesLeft:hover,
+  .pricesRight:hover {
+    transform: none;
   }
 }
