@@ -4,20 +4,17 @@ function Place() {
     // Define your address
     const address = 'S. Daukanto 31, Vilkaviškis';
     
-    // Directly define your API key here
-    const googleMapsApiKey = 'AIzaSyCekG6e4NSZ4cWIa9hmqrX0-oNyM5kqqU0';
-
-    // Encode the address for the URL
+    const googleMapsApiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
     const encodedAddress = encodeURIComponent(address);
-    
-    // Create the embed URL for Google Maps
-    const mapEmbedUrl = `https://www.google.com/maps/embed/v1/place?key=${googleMapsApiKey}&q=${encodedAddress}`;
+    const mapEmbedUrl = googleMapsApiKey
+        ? `https://www.google.com/maps/embed/v1/place?key=${googleMapsApiKey}&q=${encodedAddress}`
+        : `https://www.google.com/maps?q=${encodedAddress}&output=embed`;
 
     return (
         <section className={styles.placeSection} id='place'>
             <div className={styles.placeContainer}>
                 <div className={styles.placeLeft}>
-                    <h3>Darbo laikas</h3>
+                    <h2>Darbo laikas</h2>
                     <div className={styles.placeWorkingTime}>
                         <div className={styles.placeDays}>
                             <span>Pirmadienis </span>
@@ -49,6 +46,7 @@ function Place() {
                         allowFullScreen
                         referrerPolicy="no-referrer-when-downgrade"
                         src={mapEmbedUrl}
+                        title="UAB GKSvirtucom location map"
                     ></iframe>
                 </div> 
             </div>

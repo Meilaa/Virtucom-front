@@ -1,69 +1,75 @@
-.pricesContainer{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 4rem; /* 50px */
-    padding: 2rem 0; /* 30px 0 */
-    max-width: 90rem; /* 1440px */
-    margin: 0 auto;
-    width: 100%;
+.pricesSection {
+  padding: clamp(3.5rem, 8vw, 6rem) 0;
 }
+
+.pricesContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  width: min(100% - 2rem, var(--max));
+  margin: 0 auto;
+}
+
+.pricesLeft,
+.pricesRight {
+  padding: 1.7rem 1.55rem 1.85rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  backdrop-filter: blur(8px);
+  transition: border-color 0.25s ease, transform 0.3s var(--ease);
+}
+
+.pricesLeft:hover,
+.pricesRight:hover {
+  border-color: rgba(2, 153, 220, 0.35);
+  transform: translateY(-0.15rem);
+}
+
+.pricesLeft h2,
+.pricesRight h2 {
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  line-height: 1.2;
+  margin-bottom: 1.3rem;
+}
+
 .highlight {
-    background: linear-gradient(to top, #B3469C 40%, #0299DC 60%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+  color: var(--brand);
+  background: none;
+  -webkit-text-fill-color: unset;
+}
+
 .checkList {
-    margin: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.checkListItem {
+  position: relative;
+  padding-left: 1.35rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.checkListItem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  background: var(--brand);
+}
+
+@media only screen and (max-width: 47.9375rem) {
+  .pricesContainer {
+    grid-template-columns: 1fr;
   }
-  .pricesLeft h1, .pricesRight h1 {
-    font-family: 'Chivo', sans-serif;
-    font-size: 2.0rem; /* 40px */
-    line-height: 2.2rem; /* 30px */
-    padding-bottom: 1.5rem;
+
+  .pricesLeft:hover,
+  .pricesRight:hover {
+    transform: none;
   }
-  .checkListItem {
-    position: relative;
-    list-style-type: none; /* Ensure no default bullet points are shown */
-    padding-left: 2.5rem; /* Space for the custom checkmark */
-    margin-bottom: 0.3125rem; /* 0.5rem space between list items */
-    line-height: 1.625rem; /* 26px */
-    font-weight: 600;
-    font-size: 1.125rem; /* 18px */
-  }
-  
-  .checkListItem::before {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 0; /* Position the checkmark at the start of the list item */
-    top: -0.125rem; /* -2px, adjust as necessary for vertical alignment */
-    width: 0.3125rem; /* 5px */
-    height: 0.6875rem; /* 11px */
-    border-width: 0 0.125rem 0.125rem 0; /* Make a checkmark shape */
-    border-style: solid;
-    color: #0299DC;
-    transform-origin: bottom left;
-    transform: rotate(45deg); /* Rotate to form a checkmark */
-  }
-  @media only screen and (max-width: 47.9375rem) { /* 767px */
-    .pricesContainer {
-      flex-direction: column;
-      gap: 15px;
-      padding: 1.8rem 0; /* 12px 0 */
-    }
-  
-    .pricesLeft {
-      width: 100%;
-      padding-left: 1.5rem; /* 15px */
-    }
-  
-    .pricesRight {
-      width: 100%;
-      padding-left: 1.5rem; /* 15px */
-    }
-    .checkListItem {
-      line-height: 1.5rem; /* 24px */
-      font-size: 1rem; /* 16px */
-    }
-  }
+}

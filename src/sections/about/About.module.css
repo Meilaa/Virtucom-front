@@ -1,105 +1,60 @@
-.highlight {
-  background: linear-gradient(to top, #B3469C 40%, #0299DC 60%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .aboutSection {
-  display: flex;
-  justify-content: center;
+  padding: clamp(3.5rem, 8vw, 6.5rem) 0;
 }
 
 .aboutContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 3.125rem; /* 50px */
-  padding: 1.875rem 0; /* 30px 0 */
-  max-width: 90rem; /* 1440px */
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(1.75rem, 4.5vw, 4rem);
+  align-items: start;
+  width: min(100% - 2rem, var(--max));
   margin: 0 auto;
-  width: 100%;
+  animation: rise-in 0.75s var(--ease) both;
 }
 
-.aboutLeft {
-  width: 45%;
+.aboutLeft h2 {
+  font-size: clamp(2.15rem, 4.2vw, 3.25rem);
+  margin-bottom: 1.35rem;
+  max-width: 10ch;
 }
 
-.aboutLeft h1 {
-  font-family: 'Chivo', sans-serif;
-  font-size: 2.5rem; /* 40px */
-  line-height: 1.875rem; /* 30px */
+.highlight {
+  color: var(--brand);
+  background: none;
+  -webkit-text-fill-color: unset;
 }
 
 .aboutLeft p {
-  font-size: 1.125rem; /* 18px */
-  line-height: 1.75rem; /* 28px */
-  padding: 1.875rem 0; /* 30px 0 */
-}
-
-.aboutRight {
-  width: 45%;
+  color: var(--ink-soft);
+  font-size: 1.08rem;
+  line-height: 1.75;
+  max-width: 38rem;
 }
 
 .checkList {
-  margin: 0;
-  padding-left: 1.2rem;
+  list-style: none;
+  display: grid;
+  gap: 0.85rem;
+  padding: 0.25rem 0 0.25rem 1.15rem;
+  border-left: 3px solid var(--brand);
 }
 
 .checkListItem {
   position: relative;
-  list-style-type: none; /* Ensure no default bullet points are shown */
-  padding-left: 2.5rem; /* Space for the custom checkmark */
-  margin-bottom: 0.3125rem; /* 0.5rem space between list items */
-  line-height: 1.625rem; /* 26px */
+  padding-left: 0.15rem;
   font-weight: 600;
-  font-size: 1.125rem; /* 18px */
+  font-size: 1.02rem;
+  line-height: 1.45;
+  color: var(--ink);
 }
 
-.checkListItem::before {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0; /* Position the checkmark at the start of the list item */
-  top: -0.125rem; /* -2px, adjust as necessary for vertical alignment */
-  width: 0.3125rem; /* 5px */
-  height: 0.6875rem; /* 11px */
-  border-width: 0 0.125rem 0.125rem 0; /* Make a checkmark shape */
-  border-style: solid;
-  color: #0299DC;
-  transform-origin: bottom left;
-  transform: rotate(45deg); /* Rotate to form a checkmark */
-}
-
-@media only screen and (max-width: 47.9375rem) { /* 767px */
+@media only screen and (max-width: 47.9375rem) {
   .aboutContainer {
-    flex-direction: column;
-    gap: 0;
-    padding: 0.75rem 0; /* 12px 0 */
+    grid-template-columns: 1fr;
   }
 
-  .aboutLeft {
-    width: 100%;
-    padding-left: 0.9375rem; /* 15px */
-  }
-
-  .aboutRight {
-    width: 100%;
-  }
-
-  .aboutLeft h1 {
-    font-size: 2.1875rem; /* 35px */
-    line-height: 2.1875rem; /* 35px */
-  }
-
-  .aboutLeft p {
-    font-size: 1rem; /* 16px */
-    line-height: 1.25rem; /* 20px */
-    padding: 1.25rem 0; /* 20px 0 */
-  }
-
-  .checkListItem {
-    line-height: 1.5rem; /* 24px */
-    font-size: 1rem; /* 16px */
+  .aboutLeft h2 {
+    font-size: 2.1rem;
+    max-width: none;
   }
 }

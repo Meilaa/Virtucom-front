@@ -1,101 +1,189 @@
+.headerSection {
+  position: relative;
+  z-index: 40;
+  background: rgba(248, 251, 253, 0.82);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.skipLink {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 100;
+  padding: 0.6rem 1rem;
+  background: var(--brand);
+  color: #fff;
+  font-weight: 600;
+  transition: top 0.2s var(--ease);
+}
+
+.skipLink:focus {
+  top: 0.75rem;
+}
+
 .headerContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .headerTop {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3.125rem; /* 50px */
-  height: 7.625rem; /* 122px */
-  max-width: 90rem; /* 1440px */
+  gap: 1.5rem;
+  min-height: 5.1rem;
+  width: min(100% - 2rem, var(--max));
   margin: 0 auto;
-  width: 100%;
-  font-size: 1.125rem; /* 18px */
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.logoLink {
+  display: inline-flex;
+  flex-shrink: 0;
+  transition: transform 0.25s var(--ease);
+}
+
+.logoLink:hover {
+  transform: translateY(-1px);
 }
 
 .logo {
-  width: 9.375rem; /* 150px */
+  width: 8.75rem;
+  height: auto;
+}
+
+.linkActive {
+  color: #fff !important;
+  background: rgba(2, 153, 220, 0.22);
 }
 
 .headerTop img {
   height: auto;
 }
 
-.topHeaderSecond {
-  display: flex;
-  flex-direction: row;
-  gap: 0.625rem; /* 10px */
-  justify-content: center;
-  align-items: center;
-}
-
-.topHeaderSecond svg {
-  width: 1.875rem; /* 30px */
-}
-
+.topHeaderSecond,
 .topHeaderThird {
   display: flex;
   flex-direction: row;
-  gap: 0.625rem; /* 10px */
+  gap: 0.55rem;
   justify-content: center;
   align-items: center;
 }
 
-.topHeaderThird svg {
-  width: 1.875rem; /* 30px */
+.topHeaderSecond svg,
+.topHeaderThird svg,
+.svgIcon {
+  width: 1.1rem;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .topHeaderLast {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem; /* 20px */
+  gap: 0.35rem;
+  align-items: flex-end;
+  font-weight: 600;
+  color: var(--ink);
+  min-width: 10rem;
+}
+
+.topHeaderLast a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.2s ease;
+}
+
+.topHeaderLast a:hover {
+  color: var(--brand);
 }
 
 .headerBottom {
+  position: sticky;
+  top: 0;
+  z-index: 41;
   display: flex;
-  flex-direction: row;
-  background-color: #1E1E1E;
-  color: #FFFFFF;
-  height: 4rem; /* 64px */
-  padding: 0 12.5rem; /* 200px */
+  width: 100%;
+  min-height: 3.35rem;
+  margin: 0;
+  background: linear-gradient(180deg, var(--charcoal) 0%, #0c1118 100%);
+  color: #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.headerBottom a {
+.headerBottom a,
+.link {
   display: flex;
   justify-content: center;
-  height: 100%;
   align-items: center;
-  width: 100%;
+  flex: 1 1 0;
+  min-height: 3.35rem;
+  height: 100%;
+  padding: 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
-@media only screen and (max-width: 47.9375rem) { /* 767px */
-  .headerBottom {
-    padding: 0;
-    height: 2.8125rem; /* 45px */
-  }
+.headerBottom a:hover,
+.link:hover {
+  color: #7fd4f5;
+  background: rgba(255, 255, 255, 0.04);
+}
 
-  .headerBottom a {
-    font-size:  0.615rem; /* 13px */
-  }
+.headerBottom a:focus-visible,
+.link:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: -2px;
+}
 
-  .headerTop a, .headerTop span {
-    font-size: 0.8125rem; /* 13px */
-  }
-
+@media only screen and (max-width: 47.9375rem) {
   .headerTop {
-    height: 5.3125rem; /* 85px */
-    gap: 1.25rem; /* 20px */
-    justify-content: inherit;
+    min-height: 4.1rem;
+    gap: 0.75rem;
   }
-  
+
+  .logo {
+    width: 6.5rem;
+  }
+
+  .topHeaderSecond,
+  .topHeaderLast a:last-child {
+    display: none;
+  }
+
+  .headerBottom {
+    min-height: 3rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .headerBottom::-webkit-scrollbar {
+    display: none;
+  }
+
+  .headerBottom a,
+  .link {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: none;
+    min-width: 5.6rem;
+    min-height: 3rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    padding: 0 0.9rem;
+    margin: 0;
+  }
+
+  .topHeaderThird span,
   .topHeaderLast a {
-    display: none;
-  }
-  
-  .topHeaderSecond {
-    display: none;
+    font-size: 0.78rem;
   }
 }

@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Virtucom Front
 
-## Getting Started
+Next.js marketing site for **UAB GKSvirtucom**, migrated from **Vercel** to **Cloudflare Workers** via [`@opennextjs/cloudflare`](https://opennext.js.org/cloudflare).
 
-First, run the development server:
+## Local development
 
 ```bash
+npm install
+cp .env.example .env.local   # or use the committed .dev.vars for Workers preview
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Cloudflare Workers (production)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Script | Purpose |
+| --- | --- |
+| `npm run preview` | Build and run locally in the Workers runtime |
+| `npm run deploy` | Build and deploy to Cloudflare Workers |
+| `npm run upload` | Build and upload a new Worker version (gradual deploy) |
+| `npm run cf-typegen` | Generate Cloudflare binding types |
 
-## Learn More
+### Deploy
 
-To learn more about Next.js, take a look at the following resources:
+1. Create an API token in the [Cloudflare dashboard](https://dash.cloudflare.com/profile/api-tokens) with **Workers Scripts Edit** + **Account Settings Read**.
+2. Set credentials locally (or in CI):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   export CLOUDFLARE_API_TOKEN=...
+   export CLOUDFLARE_ACCOUNT_ID=...
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Deploy:
 
-## Deploy on Vercel
+   ```bash
+   npm run deploy
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The Worker name is `virtucom-front` (see `wrangler.jsonc`).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Live**
+
+| Host | URL |
+| --- | --- |
+| Production | [https://virtucom.lt](https://virtucom.lt) |
+| www | [https://www.virtucom.lt](https://www.virtucom.lt) |
+| workers.dev | [https://virtucom-front.lovediary.workers.dev](https://virtucom-front.lovediary.workers.dev) |
+
+Custom domains `virtucom.lt` and `www.virtucom.lt` are attached to Worker `virtucom-front`. Email MX/TXT records were left unchanged.
+
+You can also connect this GitHub repo under **Workers → Create → Git integration** so production deploys on every merge to `main`.
+
+### Leaving Vercel
+
+- This repo includes `vercel.json` that **skips Vercel builds** (`ignoreCommand` exits 0).
+- Disconnect the project in the [Vercel dashboard](https://vercel.com/dashboard) so the blocked-account check stops failing on PRs.
+- Vercel A/CNAME origins for `@` and `www` have been removed from the Cloudflare zone.
+
+## Environment variables
+
+| Name | Required | Description |
+| --- | --- | --- |
+| `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | Yes (for the map) | Google Maps Embed API key |
+
+Local: `.env.local` or `.dev.vars` (both gitignored).  
+Production: `vars` in `wrangler.jsonc` (or Cloudflare dashboard → Worker → Settings → Variables).
+
+Restrict the Maps key in Google Cloud Console to HTTP referrers `https://virtucom.lt/*` and `https://www.virtucom.lt/*` (and localhost for development), and enable only the Maps Embed API.
+
+## Shop catalog (ACME-ready)
+
+- Public catalog: [`/parduotuve`](http://localhost:3000/parduotuve)
+- Product data lives in `src/lib/acme/` with ACME/ACC-shaped fields (`supplierCode`, vendor, stock, specs)
+- Today it uses a mock catalog; swap `loadProducts()` in `src/lib/acme/catalog.js` for the real ACME SOAP API when you have a license key
+- No online checkout yet — product pages CTA to phone / email

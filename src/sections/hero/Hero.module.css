@@ -1,51 +1,170 @@
 .partsSection {
+  position: relative;
   width: 100%;
-  height: 38.75rem; /* 620px for full screen height */
+  min-height: min(92vh, 46rem);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-color: var(--charcoal);
   display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-image 1s ease-in-out; /* Smooth transition */
+  align-items: flex-end;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.partsSection::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 28%;
+  background: linear-gradient(180deg, transparent, rgba(16, 21, 28, 0.35));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 12, 18, 0.18) 0%, rgba(8, 12, 18, 0.55) 48%, rgba(8, 12, 18, 0.9) 100%),
+    linear-gradient(105deg, rgba(2, 153, 220, 0.28), transparent 42%);
+  pointer-events: none;
+  animation: soft-reveal 0.9s var(--ease) both;
 }
 
 .textContainer {
-  text-align: center;
-  color: white; /* Adjust based on the background color */
-  background-color: rgba(0, 0, 0, 0.5); /* Transparent background for better readability */
-  padding: 1.25rem; /* 20px */
-  width: 100%;
+  position: relative;
+  z-index: 2;
+  width: min(100% - 2rem, var(--max));
+  margin: 0 auto 4rem;
+  color: #fff;
+  animation: fade-slide 0.75s var(--ease) both;
 }
 
-.textContainer h1 {
-  font-size: 2rem; /* Adjusted to a more reasonable size */
-  margin-bottom: 0.5rem; /* 8px */
+.brandMark {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  margin-bottom: 0.35rem;
+  color: #fff;
+  text-shadow: 0 0.35rem 1.6rem rgba(0, 0, 0, 0.35);
 }
 
-.textContainer h2 {
-  font-size: 1.25rem; /* Adjusted to a more reasonable size */
-  margin-bottom: 1rem; /* 16px */
+.brandMark::after {
+  content: "";
+  display: block;
+  width: 3.25rem;
+  height: 0.22rem;
+  margin-top: 0.85rem;
+  background: var(--brand);
+}
+
+.slideTitle {
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 3.6vw, 2.55rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  max-width: 18ch;
+  margin: 1.1rem 0 0.7rem;
 }
 
 .subtext {
-  font-size: 0.9rem; /* Adjusted to be slightly smaller */
+  font-size: clamp(1.02rem, 1.7vw, 1.2rem);
+  max-width: 34ch;
+  color: rgba(255, 255, 255, 0.86);
+  margin-bottom: 1.55rem;
 }
 
-/* Media Query for mobile screens */
-@media only screen and (max-width: 47.9375rem) { /* 767px */
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0.75rem 1.45rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  border: 1px solid transparent;
+  transition: transform 0.25s var(--ease), background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.ctaPrimary {
+  background: var(--brand);
+  color: #fff;
+}
+
+.ctaPrimary:hover {
+  background: var(--brand-deep);
+  transform: translateY(-2px);
+}
+
+.ctaSecondary {
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.ctaSecondary:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.dots {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 1.35rem;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.45rem;
+}
+
+.dot,
+.dotActive {
+  width: 0.55rem;
+  height: 0.55rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0.1rem;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: width 0.25s var(--ease), background-color 0.2s ease;
+}
+
+.dot:focus-visible,
+.dotActive:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.dotActive {
+  background: #fff;
+  width: 1.5rem;
+}
+
+@media only screen and (max-width: 47.9375rem) {
   .partsSection {
-    height: 31.25rem; /* 500px */
+    min-height: 36rem;
   }
 
-  .textContainer h1 {
-    font-size: 1.8rem; /* Adjust for smaller screens */
+  .textContainer {
+    margin-bottom: 3.25rem;
   }
 
-  .textContainer h2 {
-    font-size: 1.2rem; /* Adjust for smaller screens */
-  }
-
-  .subtext {
-    font-size: 0.8rem; /* Adjust for smaller screens */
+  .brandMark {
+    font-size: 1.85rem;
   }
 }

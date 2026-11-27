@@ -1,107 +1,106 @@
+.footerSection {
+  background:
+    linear-gradient(180deg, #121821 0%, var(--charcoal) 100%);
+  color: rgba(255, 255, 255, 0.88);
+  margin-top: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footerContainer {
+  width: min(100% - 2rem, var(--max));
+  margin: 0 auto;
+  padding: 3rem 0 2rem;
+}
+
 .footerMiddle {
-    height: 9.75rem; /* 156px */
-}
-
-.footerInfo, .footerInfoBottom {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-evenly;
-    height: 50%;
-}
-
-.footerCallUs svg {
-    width: 1.875rem; /* 30px */
+  display: grid;
+  gap: 1.65rem;
 }
 
 .footerCallUs {
-    display: flex;
-    justify-content: center;
-    height: 50%;
-    gap: 0.3125rem; /* 5px */
-    align-items: center;
-    font-size: 1.5rem; /* Adjusted from 1.875rem (30px) to 1.5rem (24px) */
-    line-height: 1em;
-    font-family: 'Chivo', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+  font-weight: 700;
+  color: #fff;
+}
+
+.footerCallUs svg {
+  width: 1.5rem;
+}
+
+.footerCallUs svg path {
+  stroke: #fff;
 }
 
 .phoneNumber {
-    font-size: 1.5rem; /* Adjusted from 1.875rem (30px) to 1.5rem (24px) */
-    line-height: 1em;
-    font-family: 'Chivo', sans-serif;
-    background: linear-gradient(to top, #B3469C 40%, #0299DC 60%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  color: #7fd4f5;
+  background: none;
+  -webkit-text-fill-color: unset;
+  transition: color 0.2s ease;
 }
 
-.footerAddress svg {
-    width: 1.125rem; /* 18px */
+.phoneNumber:hover {
+  color: #fff;
 }
 
-.footerEmail, .footerAddress, .footerFb {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; /* 8px */
-    height: 3.125rem; /* 50px */
+.footerInfo {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
 }
 
-.footerEmail {
-    gap: 0.625rem; /* 10px */
+.footerEmail,
+.footerAddress,
+.footerHours {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 500;
 }
 
+.footerEmail:hover,
+.footerAddress:hover {
+  color: #7fd4f5;
+}
+
+.footerAddress svg,
 .footerEmail svg {
-    width: 1.125rem; /* 18px */
+  width: 1.05rem;
+  height: auto;
+  flex-shrink: 0;
 }
 
-.footerFb svg {
-    width: 1.125rem; /* 18px */
+.footerInfoBottom {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.9rem;
 }
 
 .footerRights {
-    display: flex;
-    justify-content: center;
-    margin-top: 2.5rem; /* 40px */
-    margin-bottom: 1.875rem; /* 30px */
+  margin-top: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.86rem;
 }
 
-@media only screen and (max-width: 47.9375rem) { /* 767px */
-    .footerInfo {
-        flex-direction: column;
-        align-items: center;
-    }
+@media only screen and (max-width: 47.9375rem) {
+  .footerInfo {
+    grid-template-columns: 1fr;
+  }
 
-    .footerMiddle {
-        height: auto;
-    }
+  .footerCallUs {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
 
-    .footerCallUs {
-        padding: 1.5625rem 0; /* 25px 0 */
-        font-size: 1.25rem; /* Adjusted from 1.5625rem (25px) to 1.25rem (20px) */
-        line-height: 0.8em;
-    }
-
-    .footerRights {
-        margin: 0.9375rem 0; /* 15px 0 */
-        margin-bottom: 2.5rem; /* 40px */
-    }
-
-    .phoneNumber {
-        font-size: 1.25rem; /* Adjusted from 1.5625rem (25px) to 1.25rem (20px) */
-        line-height: 0.8em;
-    }
-
-    .footerCallUs {
-        font-size: 1.25rem; /* Adjusted from 1.5625rem (25px) to 1.25rem (20px) */
-        line-height: 0.8em;
-        flex-direction: column;
-        gap: 1.25rem; /* 20px */
-    }
-
-    .footerCallUs svg {
-        display: none;
-    }
-
-    .footerInfoBottom {
-        padding: 1.25rem 0; /* 20px 0 */
-    }
+  .footerCallUs svg {
+    display: none;
+  }
 }
